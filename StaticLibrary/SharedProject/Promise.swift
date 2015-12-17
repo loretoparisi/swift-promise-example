@@ -214,6 +214,13 @@ class Promise {
 		}
 		return closure()
 	}
+	func sync(lock: AnyObject!, @noescape closure: () -> ())  {
+		objc_sync_enter(lock)
+		defer {
+			objc_sync_exit(lock)
+		}
+		closure()
+	}
 	
 	private func doResolve(value: AnyObject?, shouldRunFinally: Bool = true) {
 		self.sync(self, closure: {
