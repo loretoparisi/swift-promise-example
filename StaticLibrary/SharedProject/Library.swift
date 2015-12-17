@@ -1,5 +1,5 @@
 ﻿import Sugar
-import Promise
+//import Promise
 
 public class MiaClasse2 {
 	
@@ -16,7 +16,7 @@ public class MiaClasse2 {
 		
 		
 		// this is just an example now until the Promise.swift will work
-		var promise = Promise { (resolve: (AnyObject?) -> (), reject: (AnyObject?) -> ()) -> () in
+		/*var promise = Promise { (resolve: (AnyObject?) -> (), reject: (AnyObject?) -> ()) -> () in
 			
 			/*response = API.login()
 			if (response.success) {
@@ -33,7 +33,7 @@ public class MiaClasse2 {
 			}
 			.finally { () -> () in
 			// Close connections, do cleanup
-		}
+		}*/
 		
 		println(url);
 	

@@ -13,6 +13,7 @@
         <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
         <SDK>iOS</SDK>
         <CreateHeaderFile>True</CreateHeaderFile>
+        <CrossPlatform>True</CrossPlatform>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
         <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
         <CaptureConsoleOutput>False</CaptureConsoleOutput>
         <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+        <CrossPlatform>True</CrossPlatform>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <Optimize>true</Optimize>
@@ -32,6 +34,7 @@
         <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
         <CaptureConsoleOutput>False</CaptureConsoleOutput>
         <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+        <CrossPlatform>True</CrossPlatform>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="CoreGraphics.fx"/>
@@ -44,5 +47,5 @@
     </ItemGroup>
     <ItemGroup/>
     <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Oxygene/RemObjects.Oxygene.Nougat.targets"/>
-    <Import Project="SharedProject\SharedProject.projitems" Label="Shared"/>
+    <Import Project="SharedProject/SharedProject.projitems" Label="Shared"/>
 </Project>

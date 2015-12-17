@@ -6,6 +6,8 @@
 //  Copyright © 2015 Musixmatch. All rights reserved.
 //
 
+import Foundation;
+
 class Deferred: Promise {
     
     var promise:Promise
@@ -72,8 +74,20 @@ class All: Promise {
                     self.statusToChangeTo = .RESOLVED
                     
                     // Need to filter out nil values before mapping values to array
-                    let filteredNils = self.promises.filter( { (p) -> (Bool) in return (p.value != nil) } )
-                    let values = filteredNils.map( { (p) -> (AnyObject) in print(p.value); return p.value! } )
+                    //let filteredNils = self.promises.filter( { (p) -> (Bool) in return (p.value != nil) } )
+                    //let values = filteredNils.map( { (p) -> (AnyObject) in print(p.value); return p.value! } )
+                    
+                    var filteredNils = [AnyObject]()
+                    for el in self.promises {
+                        if(el.value != nil) {
+                            filteredNils.append(el.value!)
+                        }
+                    }
+                    
+                    var values = [AnyObject]()
+                    for el in filteredNils {
+                        values.append(el)
+                    }
                     
                     self.doResolve(values, shouldRunFinally: false)
                 }
@@ -134,8 +148,8 @@ class Promise {
     }
     
     private init() {
-        cat = (catchClosure?){(x:AnyObject?) -> () in }
-        fin = (finallyClosure?){() ->() in }
+        self.cat = (catchClosure?){(x:AnyObject?) -> () in }
+        self.fin = (finallyClosure?){() ->() in }
     }
     
     convenience init(promiseClosure: ( resolve: (AnyObject?) -> (), reject: (AnyObject?) -> () ) -> ()) {

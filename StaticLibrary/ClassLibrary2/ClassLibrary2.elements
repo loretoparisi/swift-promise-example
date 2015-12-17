@@ -10,6 +10,7 @@
         <Name>classlibrary2</Name>
         <RootNamespace>SampleLibrary</RootNamespace>
         <AssemblyName>SampleLibrary</AssemblyName>
+        <CrossPlatform>True</CrossPlatform>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         <Optimize>false</Optimize>
@@ -28,6 +29,7 @@
         <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
         <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
         <AssemblyName>SampleLibrary</AssemblyName>
+        <CrossPlatform>True</CrossPlatform>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <Optimize>true</Optimize>
@@ -45,6 +47,7 @@
         <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
         <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
         <AssemblyName>SampleLibrary</AssemblyName>
+        <CrossPlatform>True</CrossPlatform>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="android.jar"/>
