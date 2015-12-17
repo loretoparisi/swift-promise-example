@@ -1,0 +1,3 @@
+/Users/admin/Documents/StaticLibrary/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.pas
+/Users/admin/Documents/StaticLibrary/bin/Debug/iOS/libStaticLibrary.a
+/Users/admin/Documents/StaticLibrary/obj/Debug/iOS/libStaticLibrary.a

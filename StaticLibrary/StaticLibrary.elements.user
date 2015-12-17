@@ -1,0 +1,7 @@
+
+<Project xmlns='http://schemas.microsoft.com/developer/msbuild/2003'>
+    <PropertyGroup>
+        <CrossBoxDevice>iPhone6Loreto</CrossBoxDevice>
+        <CrossBoxDeviceID>d5a89e7ee3f07d9a69d1836fe8458680dc1f06c9</CrossBoxDeviceID>
+    </PropertyGroup>
+</Project>

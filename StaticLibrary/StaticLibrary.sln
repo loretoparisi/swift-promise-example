@@ -1,0 +1,33 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedProject", "SharedProject\SharedProject.elements", "{C1A5F12B-B7E9-4613-9874-985BEAA4D987}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "StaticLibrary", "StaticLibrary.elements", "{0379A90E-1528-4287-B936-8E5758288878}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C1A5F12B-B7E9-4613-9874-985BEAA4D987} = {C1A5F12B-B7E9-4613-9874-985BEAA4D987}
+	EndProjectSection
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "classlibrary2", "ClassLibrary2\ClassLibrary2.elements", "{F650959E-6784-4F2E-B6EE-D877D82E2690}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1A5F12B-B7E9-4613-9874-985BEAA4D987}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{C1A5F12B-B7E9-4613-9874-985BEAA4D987}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{0379A90E-1528-4287-B936-8E5758288878}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{0379A90E-1528-4287-B936-8E5758288878}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{0379A90E-1528-4287-B936-8E5758288878}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{0379A90E-1528-4287-B936-8E5758288878}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{F650959E-6784-4F2E-B6EE-D877D82E2690}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{F650959E-6784-4F2E-B6EE-D877D82E2690}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{F650959E-6784-4F2E-B6EE-D877D82E2690}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{F650959E-6784-4F2E-B6EE-D877D82E2690}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

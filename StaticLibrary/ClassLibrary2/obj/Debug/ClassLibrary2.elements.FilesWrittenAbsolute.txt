@@ -1,0 +1,15 @@
+/Users/admin/Documents/StaticLibrary/ClassLibrary2/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.pas
+/Users/admin/Documents/StaticLibrary/ClassLibrary2/bin/Debug/ClassLibrary2.jar
+/Users/admin/Documents/StaticLibrary/ClassLibrary2/obj/Debug/ClassLibrary2.jar
+/Users/admin/Documents/StaticLibrary/ClassLibrary2/bin/Debug/swift.jar
+/Users/admin/Documents/StaticLibrary/ClassLibrary2/bin/Debug/com.remobjects.elements.rtl.jar
+/Users/admin/Documents/StaticLibrary/ClassLibrary2/bin/Debug/sugar.jar
+/Users/admin/Documents/StaticLibrary/ClassLibrary2/bin/Debug/Musixmatch.jar
+/Users/admin/Documents/StaticLibrary/ClassLibrary2/obj/Debug/Musixmatch.jar
+/Users/admin/Documents/StaticLibrary/ClassLibrary2/bin/Debug/SampleLibrary.jar
+/Users/admin/Documents/StaticLibrary/ClassLibrary2/obj/Debug/SampleLibrary.jar
+/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/ClassLibrary2/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.pas
+/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/ClassLibrary2/obj/Debug/SampleLibrary.jar
+/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/ClassLibrary2/bin/Debug/swift.jar
+/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/ClassLibrary2/bin/Debug/com.remobjects.elements.rtl.jar
+/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/ClassLibrary2/bin/Debug/sugar.jar
