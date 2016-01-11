@@ -27,10 +27,10 @@ class Promise {
 	typealias promiseClosure = ( (AnyObject?) -> (), (AnyObject?) -> () ) -> ()
 	
 	var thens = Array<thenClosure>()
-	var cat: (AnyObject?) -> ()
-	//var cat: catchClosure
-	//var fin: finallyClosure?
-	var fin: () -> ()
+	//var cat: (AnyObject?) -> ()
+	var cat: catchClosure?
+	var fin: finallyClosure?
+	//var fin: () -> ()
 	
 	var value: AnyObject?
 	
@@ -47,8 +47,6 @@ class Promise {
 	}
 	
 	private init() {
-		self.cat = {(x:AnyObject?) -> () in };
-		self.fin = { }
 	}
 	
 	convenience init(promiseClosure: ( resolve: (AnyObject?) -> (), reject: (AnyObject?) -> () ) -> ()) {
@@ -164,7 +162,7 @@ class Promise {
 			var chain: Promise?
 			
 			var paramValue: AnyObject? = self.value
-			for (_, then) in self.thens.enumerate() {
+			for then in self.thens.enumerate() {
 				
 				// If a chain is hit, add the then
 				if (chain != nil) { chain?.then(then); return }
