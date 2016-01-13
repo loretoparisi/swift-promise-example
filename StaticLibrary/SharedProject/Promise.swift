@@ -11,6 +11,7 @@ import Foundation;
 #endif
 
 import Sugar.IO;
+import Sugar.Data;
 
 class Promise {
 	
@@ -115,6 +116,13 @@ class Promise {
 		return self
 	}
 	
+	func hardlock<T>(lock: AnyObject!, @noescape closure: () -> T) -> T {
+		let mylock = Object();
+		__lock mylock {
+			return closure()
+		}
+	}
+	
 	func fsync<T>(lock: AnyObject!, @noescape closure: () -> T) -> T {
 		if( Sugar.IO.FileUtils.Exists("lock") ) { // locked
 			fsync(lock, closure)
@@ -131,7 +139,8 @@ class Promise {
 	}
 	
 	func sync<T>(lock: AnyObject!, @noescape closure: () -> T) -> T {
-#if cocoa
+		return hardlock(lock, closure: closure);
+/*#if cocoa
 		objc_sync_enter(lock)
 		defer {
 			objc_sync_exit(lock)
@@ -139,11 +148,12 @@ class Promise {
 		return closure()
 #else if java
 		fsync(lock, closure)
-#endif
+#endif*/
 	}
 	
 	func sync(lock: AnyObject!, @noescape closure: () -> ())  {
-#if cocoa
+		hardlock(lock, closure: closure);
+/*#if cocoa
 		objc_sync_enter(lock)
 		defer {
 			objc_sync_exit(lock)
@@ -151,7 +161,7 @@ class Promise {
 		closure()
 #else if java
 		fsync(lock, closure)
-#endif
+#endif*/
 	}
 	
 	private func doResolve(value: AnyObject?, shouldRunFinally: Bool = true) {

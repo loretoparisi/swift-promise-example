@@ -4,8 +4,6 @@
 <dict>
 	<key>ActiveProject</key>
 	<string>classlibrary2</string>
-	<key>ActiveProjectFor_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/Promise.swift</key>
-	<string>/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/StaticLibrary.elements</string>
 	<key>DebugPaneActiveTab</key>
 	<real>0.0</real>
 	<key>FolderExpanded_SharedProject_file:///Users/admin/Documents/StaticLibrary/SharedProject/SharedProject.elements_file:///Users/admin/</key>
@@ -30,12 +28,14 @@
 	<true/>
 	<key>FolderExpanded_classlibrary2_/Users/admin/Documents/StaticLibrary/ClassLibrary2/ClassLibrary2.elements---References</key>
 	<true/>
+	<key>FolderExpanded_classlibrary2_/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/ClassLibrary2/ClassLibrary2.elements---References</key>
+	<true/>
 	<key>FolderExpanded_classlibrary2_file:///Users/admin/Documents/StaticLibrary/ClassLibrary2/ClassLibrary2.elements_file:///Users/admin/Documents/StaticLibrary/ClassLibrary2/</key>
 	<true/>
 	<key>FolderExpanded_classlibrary_file:///Users/admin/Documents/StaticLibrary/ClassLibrary/ClassLibrary.elements_file:///Users/admin/Documents/StaticLibrary/ClassLibrary/</key>
 	<true/>
 	<key>LastBuildStatusLabel</key>
-	<string>Last build failed</string>
+	<string>Last build was successful</string>
 	<key>NavigationPaneActiveTab</key>
 	<real>0.0</real>
 	<key>ProjectEnabled_file:///Users/admin/Documents/StaticLibrary/ClassLibrary2/ClassLibrary2.elements</key>
@@ -47,7 +47,7 @@
 	<key>Properties</key>
 	<dict/>
 	<key>SelectedNode</key>
-	<string>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/Promise.swift</string>
+	<string>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/Library.swift</string>
 	<key>ViewMetaData</key>
 	<dict>
 		<key>/Users/admin/Documents/StaticLibrary/StaticLibrary.sln---BuildLog</key>
@@ -78,13 +78,13 @@
 		<key>/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/StaticLibrary.sln---BuildLog</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>48</integer>
+			<integer>0</integer>
 			<key>CursorY</key>
-			<integer>54</integer>
+			<integer>61</integer>
 			<key>ScrollX</key>
 			<real>0.0</real>
 			<key>ScrollY</key>
-			<real>563</real>
+			<real>1728</real>
 			<key>ScrolledToBottom</key>
 			<true/>
 			<key>SelectionCursorUndecided</key>
@@ -284,16 +284,39 @@
 			<key>SelectionStartLine</key>
 			<integer>-1</integer>
 		</dict>
-		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/Library.swift</key>
+		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/Library.swift?type=MiaClasse2</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>5</integer>
+			<integer>12</integer>
 			<key>CursorY</key>
-			<integer>11</integer>
+			<integer>10</integer>
 			<key>ScrollX</key>
 			<real>0.0</real>
 			<key>ScrollY</key>
-			<real>108</real>
+			<real>0.0</real>
+			<key>SelectionCursorUndecided</key>
+			<false/>
+			<key>SelectionEndColumn</key>
+			<integer>-1</integer>
+			<key>SelectionEndLine</key>
+			<integer>-1</integer>
+			<key>SelectionIsLinear</key>
+			<true/>
+			<key>SelectionStartColumn</key>
+			<integer>-1</integer>
+			<key>SelectionStartLine</key>
+			<integer>-1</integer>
+		</dict>
+		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/Library.swift</key>
+		<dict>
+			<key>CursorX</key>
+			<integer>8</integer>
+			<key>CursorY</key>
+			<integer>17</integer>
+			<key>ScrollX</key>
+			<real>0.0</real>
+			<key>ScrollY</key>
+			<real>32</real>
 			<key>SelectionCursorUndecided</key>
 			<false/>
 			<key>SelectionEndColumn</key>
@@ -310,13 +333,13 @@
 		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/Promise.swift</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>48</integer>
+			<integer>4</integer>
 			<key>CursorY</key>
-			<integer>164</integer>
+			<integer>22</integer>
 			<key>ScrollX</key>
 			<real>0.0</real>
 			<key>ScrollY</key>
-			<real>2359</real>
+			<real>0.0</real>
 			<key>SelectionCursorUndecided</key>
 			<false/>
 			<key>SelectionEndColumn</key>
@@ -355,12 +378,12 @@
 		</dict>
 	</dict>
 	<key>Window_Height</key>
-	<real>773</real>
+	<real>777</real>
 	<key>Window_Width</key>
 	<real>1280</real>
 	<key>Window_X</key>
-	<real>0.0</real>
+	<real>-1600</real>
 	<key>Window_Y</key>
-	<real>4</real>
+	<real>-140</real>
 </dict>
 </plist>

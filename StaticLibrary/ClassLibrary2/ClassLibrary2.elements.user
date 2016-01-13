@@ -1,6 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <Project xmlns='http://schemas.microsoft.com/developer/msbuild/2003'>
     <PropertyGroup>
+        <AndroidPlatformName>android-19</AndroidPlatformName>
         <AssemblyName>SampleLibrary</AssemblyName>
         <CrossPlatform>True</CrossPlatform>
     </PropertyGroup>

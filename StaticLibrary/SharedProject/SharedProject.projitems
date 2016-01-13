@@ -10,6 +10,6 @@
     </PropertyGroup>
     <ItemGroup>
         <Compile Include="$(MSBuildThisFileDirectory)Library.swift"/>
-        <Compile Include="$(MSBuildThisFileDirectory)Promise.swift"/>
+        <None Include="$(MSBuildThisFileDirectory)Promise.swift"/>
     </ItemGroup>
 </Project>

@@ -11,6 +11,7 @@
         <RootNamespace>SampleLibrary</RootNamespace>
         <AssemblyName>SampleLibrary</AssemblyName>
         <CrossPlatform>True</CrossPlatform>
+        <AndroidPlatformName>android-19</AndroidPlatformName>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         <Optimize>false</Optimize>
@@ -30,6 +31,7 @@
         <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
         <AssemblyName>SampleLibrary</AssemblyName>
         <CrossPlatform>True</CrossPlatform>
+        <AndroidPlatformName>android-19</AndroidPlatformName>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <Optimize>true</Optimize>
@@ -48,6 +50,7 @@
         <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
         <AssemblyName>SampleLibrary</AssemblyName>
         <CrossPlatform>True</CrossPlatform>
+        <AndroidPlatformName>android-19</AndroidPlatformName>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="android.jar"/>
@@ -58,6 +61,10 @@
             <Private>True</Private>
         </Reference>
         <Reference Include="sugar.jar">
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="sugar.data">
+            <HintPath>bin\Debug\sugar.data.jar</HintPath>
             <Private>True</Private>
         </Reference>
     </ItemGroup>

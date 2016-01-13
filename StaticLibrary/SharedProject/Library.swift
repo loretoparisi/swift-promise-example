@@ -1,19 +1,28 @@
 ﻿import Sugar
+import Sugar.data;
+import Sugar.io;
+
 //import Promise
 
-public class MiaClasse2 {
+public class SharedClassTest {
 	
-	public  func add (var a: Int, var b: Int) -> Int {
-		return a + b;
-	}
-	
-	public func diff( var a:Int, var b:Int) -> Int {
-		return (a>b ? a-b : b-a);
+	public func databaseSetup() -> () {
+		
+		// file system folder path
+		let Separator:Char=Sugar.io.folder.Separator;
+		let userLocal:Folder=Sugar.IO.Folder.UserLocal();
+		let userLocalPath:String=userLocal.Path;
+		
+		let dbPath:String = Sugar.io.Path.Combine(userLocalPath,Separator+"db.sql");
+		
+		writeLn (dbPath )
+		
+		let dbConn:SQLiteConnection = SQLiteConnection.init(dbPath, false, true); // name, readonly, createifneeded
+		
 	}
 
 	public func httpCall(var url: String, completion: (response:String?) ->()  )	
 	{
-		
 		
 		// this is just an example now until the Promise.swift will work
 		/*var promise = Promise { (resolve: (AnyObject?) -> (), reject: (AnyObject?) -> ()) -> () in
@@ -35,26 +44,24 @@ public class MiaClasse2 {
 			// Close connections, do cleanup
 		}*/
 		
-		println(url);
-	
+		//let jsonObj:Sugar.Json.JsonObject = Sugar.Json.JsonObject();
+		//let parsedJsonObj:Sugar.Json.JsonObject = Sugar.Json.JsonObject.Load("");
+		
 		let jsonCallback: HttpContentResponseBlock<Sugar.Json.JsonDocument!>! = { response in 
 			if response.Success {
 				var obj = response.Content.RootObject
-				println( "JSON RESPONSE " )
-				println( obj)
 			}
 		}
 		Http.ExecuteRequestAsJson( Url(url), jsonCallback)
 		
 		Http.ExecuteRequest(Url( url ), { response in
-			println (response )
+			writeLn (response )
 		})
 		
 		Http.ExecuteRequest(Url(url), { response in
 			if response.Success {
 				response.GetContentAsString(nil) { content in
 					if content.Success {
-						writeLn("Response was: "+content.Content);
 						completion( content.Content )
 					}
 				}

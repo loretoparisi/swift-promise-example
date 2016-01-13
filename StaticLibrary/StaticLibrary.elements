@@ -44,6 +44,9 @@
         <Reference Include="libNougat.fx"/>
         <Reference Include="libSwift.fx"/>
         <Reference Include="libSugar.fx"/>
+        <Reference Include="libSugar.Data">
+            <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\CrossTest\CrossTest\libSugar.Data.fx</HintPath>
+        </Reference>
     </ItemGroup>
     <ItemGroup/>
     <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Oxygene/RemObjects.Oxygene.Nougat.targets"/>
