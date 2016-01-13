@@ -54,17 +54,19 @@
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="android.jar"/>
-        <Reference Include="swift.jar">
-            <Private>True</Private>
-        </Reference>
         <Reference Include="com.remobjects.elements.rtl.jar">
             <Private>True</Private>
         </Reference>
-        <Reference Include="sugar.jar">
+        <Reference Include="sugar.data">
+            <HintPath>mylibs\sugar.data.jar</HintPath>
             <Private>True</Private>
         </Reference>
-        <Reference Include="sugar.data">
-            <HintPath>bin\Debug\sugar.data.jar</HintPath>
+        <Reference Include="sugar">
+            <HintPath>mylibs\sugar.jar</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="swift">
+            <HintPath>mylibs\swift.jar</HintPath>
             <Private>True</Private>
         </Reference>
     </ItemGroup>

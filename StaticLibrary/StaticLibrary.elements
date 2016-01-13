@@ -45,7 +45,7 @@
         <Reference Include="libSwift.fx"/>
         <Reference Include="libSugar.fx"/>
         <Reference Include="libSugar.Data">
-            <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\CrossTest\CrossTest\libSugar.Data.fx</HintPath>
+            <HintPath>mylibs\libSugar.Data.fx</HintPath>
         </Reference>
     </ItemGroup>
     <ItemGroup/>

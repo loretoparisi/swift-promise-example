@@ -13,15 +13,15 @@
 		848C26401C1B4C8A006BAC15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848C263E1C1B4C8A006BAC15 /* Main.storyboard */; };
 		848C26421C1B4C8A006BAC15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848C26411C1B4C8A006BAC15 /* Assets.xcassets */; };
 		848C26451C1B4C8A006BAC15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848C26431C1B4C8A006BAC15 /* LaunchScreen.storyboard */; };
-		848C26541C1B5218006BAC15 /* libSugar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 848C26531C1B5218006BAC15 /* libSugar.a */; };
-		848C26561C1B54D7006BAC15 /* libSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 848C26551C1B54D7006BAC15 /* libSwift.a */; };
-		848C265A1C1B5546006BAC15 /* libNougat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 848C26591C1B5546006BAC15 /* libNougat.a */; };
 		84A47CEF1C440972009C8F9A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A47CEE1C440972009C8F9A /* libsqlite3.tbd */; };
 		84A47CF91C451B8B009C8F9A /* OBJCObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A47CF71C451B8B009C8F9A /* OBJCObjectFactory.m */; };
 		84A47CFA1C451B8B009C8F9A /* ObjectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A47CF81C451B8B009C8F9A /* ObjectFactory.swift */; };
-		84A47D031C454754009C8F9A /* libSugar.Data.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A47D021C454754009C8F9A /* libSugar.Data.a */; };
 		84A47D081C454B79009C8F9A /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 848C26571C1B54EF006BAC15 /* libxml2.tbd */; };
 		84A47D0C1C45735A009C8F9A /* libStaticLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A47D0A1C45735A009C8F9A /* libStaticLibrary.a */; };
+		84A47D161C46F198009C8F9A /* libNougat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A47D111C46F198009C8F9A /* libNougat.a */; };
+		84A47D171C46F198009C8F9A /* libSugar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A47D121C46F198009C8F9A /* libSugar.a */; };
+		84A47D181C46F198009C8F9A /* libSugar.Data.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A47D131C46F198009C8F9A /* libSugar.Data.a */; };
+		84A47D191C46F198009C8F9A /* libSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A47D141C46F198009C8F9A /* libSwift.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,20 +33,19 @@
 		848C26411C1B4C8A006BAC15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		848C26441C1B4C8A006BAC15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		848C26461C1B4C8A006BAC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		848C26531C1B5218006BAC15 /* libSugar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSugar.a; sourceTree = "<group>"; };
-		848C26551C1B54D7006BAC15 /* libSwift.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSwift.a; sourceTree = "<group>"; };
 		848C26571C1B54EF006BAC15 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		848C26591C1B5546006BAC15 /* libNougat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNougat.a; sourceTree = "<group>"; };
-		84A47CE51C43F5D2009C8F9A /* libStaticLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libStaticLibrary.a; sourceTree = "<group>"; };
-		84A47CEA1C440643009C8F9A /* Sugar.Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sugar.Data.h; sourceTree = "<group>"; };
 		84A47CEB1C440922009C8F9A /* CrossTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossTest.h; sourceTree = "<group>"; };
 		84A47CEE1C440972009C8F9A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		84A47CF61C451B8B009C8F9A /* OBJCObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBJCObjectFactory.h; sourceTree = "<group>"; };
 		84A47CF71C451B8B009C8F9A /* OBJCObjectFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBJCObjectFactory.m; sourceTree = "<group>"; };
 		84A47CF81C451B8B009C8F9A /* ObjectFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectFactory.swift; sourceTree = "<group>"; };
-		84A47D021C454754009C8F9A /* libSugar.Data.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSugar.Data.a; sourceTree = "<group>"; };
 		84A47D0A1C45735A009C8F9A /* libStaticLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libStaticLibrary.a; sourceTree = "<group>"; };
 		84A47D0B1C45735A009C8F9A /* StaticLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticLibrary.h; sourceTree = "<group>"; };
+		84A47D111C46F198009C8F9A /* libNougat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNougat.a; sourceTree = "<group>"; };
+		84A47D121C46F198009C8F9A /* libSugar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSugar.a; sourceTree = "<group>"; };
+		84A47D131C46F198009C8F9A /* libSugar.Data.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSugar.Data.a; sourceTree = "<group>"; };
+		84A47D141C46F198009C8F9A /* libSwift.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSwift.a; sourceTree = "<group>"; };
+		84A47D151C46F198009C8F9A /* Sugar.Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sugar.Data.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,27 +54,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A47D081C454B79009C8F9A /* libxml2.tbd in Frameworks */,
+				84A47D191C46F198009C8F9A /* libSwift.a in Frameworks */,
+				84A47D171C46F198009C8F9A /* libSugar.a in Frameworks */,
 				84A47CEF1C440972009C8F9A /* libsqlite3.tbd in Frameworks */,
-				848C265A1C1B5546006BAC15 /* libNougat.a in Frameworks */,
-				84A47D031C454754009C8F9A /* libSugar.Data.a in Frameworks */,
 				84A47D0C1C45735A009C8F9A /* libStaticLibrary.a in Frameworks */,
-				848C26561C1B54D7006BAC15 /* libSwift.a in Frameworks */,
-				848C26541C1B5218006BAC15 /* libSugar.a in Frameworks */,
+				84A47D161C46F198009C8F9A /* libNougat.a in Frameworks */,
+				84A47D181C46F198009C8F9A /* libSugar.Data.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		842AD7D11C21B9B300FFB227 /* RemObjects */ = {
-			isa = PBXGroup;
-			children = (
-				84A47CF01C440A61009C8F9A /* PublicHeaders */,
-				84A47CF11C440A69009C8F9A /* StaticLibs */,
-			);
-			name = RemObjects;
-			sourceTree = "<group>";
-		};
 		842AD7D31C21B9D200FFB227 /* StaticLibs */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,11 +122,11 @@
 		848C26391C1B4C8A006BAC15 /* CrossTest */ = {
 			isa = PBXGroup;
 			children = (
+				84A47D101C46F198009C8F9A /* Sugar */,
 				84A47D091C45735A009C8F9A /* StaticLibrary */,
 				84A47CED1C44094F009C8F9A /* Headers */,
 				84A47CEC1C440945009C8F9A /* Sources */,
 				84A47CF51C451B8B009C8F9A /* SwiftFactory */,
-				842AD7D11C21B9B300FFB227 /* RemObjects */,
 				842AD7D41C21B9E400FFB227 /* Controller */,
 				842AD7D51C21B9EC00FFB227 /* Storyboard */,
 				842AD7D61C21B9F800FFB227 /* Resources */,
@@ -160,26 +150,6 @@
 			name = Headers;
 			sourceTree = "<group>";
 		};
-		84A47CF01C440A61009C8F9A /* PublicHeaders */ = {
-			isa = PBXGroup;
-			children = (
-				84A47CEA1C440643009C8F9A /* Sugar.Data.h */,
-			);
-			name = PublicHeaders;
-			sourceTree = "<group>";
-		};
-		84A47CF11C440A69009C8F9A /* StaticLibs */ = {
-			isa = PBXGroup;
-			children = (
-				84A47D021C454754009C8F9A /* libSugar.Data.a */,
-				84A47CE51C43F5D2009C8F9A /* libStaticLibrary.a */,
-				848C26591C1B5546006BAC15 /* libNougat.a */,
-				848C26551C1B54D7006BAC15 /* libSwift.a */,
-				848C26531C1B5218006BAC15 /* libSugar.a */,
-			);
-			name = StaticLibs;
-			sourceTree = "<group>";
-		};
 		84A47CF51C451B8B009C8F9A /* SwiftFactory */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +167,34 @@
 				84A47D0B1C45735A009C8F9A /* StaticLibrary.h */,
 			);
 			path = StaticLibrary;
+			sourceTree = "<group>";
+		};
+		84A47D101C46F198009C8F9A /* Sugar */ = {
+			isa = PBXGroup;
+			children = (
+				84A47D1B1C46F1A9009C8F9A /* StaticLibs */,
+				84A47D1A1C46F1A2009C8F9A /* Headers */,
+			);
+			path = Sugar;
+			sourceTree = "<group>";
+		};
+		84A47D1A1C46F1A2009C8F9A /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				84A47D151C46F198009C8F9A /* Sugar.Data.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		84A47D1B1C46F1A9009C8F9A /* StaticLibs */ = {
+			isa = PBXGroup;
+			children = (
+				84A47D111C46F198009C8F9A /* libNougat.a */,
+				84A47D121C46F198009C8F9A /* libSugar.a */,
+				84A47D131C46F198009C8F9A /* libSugar.Data.a */,
+				84A47D141C46F198009C8F9A /* libSwift.a */,
+			);
+			name = StaticLibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +393,7 @@
 					"$(PROJECT_DIR)/CrossTest",
 					"$(PROJECT_DIR)/CrossTest/PortabileLibrary",
 					"$(PROJECT_DIR)/CrossTest/StaticLibrary",
+					"$(PROJECT_DIR)/CrossTest/Sugar",
 				);
 				New_Setting = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.musixmatch.CrossTest;
@@ -418,6 +417,7 @@
 					"$(PROJECT_DIR)/CrossTest",
 					"$(PROJECT_DIR)/CrossTest/PortabileLibrary",
 					"$(PROJECT_DIR)/CrossTest/StaticLibrary",
+					"$(PROJECT_DIR)/CrossTest/Sugar",
 				);
 				New_Setting = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.musixmatch.CrossTest;
