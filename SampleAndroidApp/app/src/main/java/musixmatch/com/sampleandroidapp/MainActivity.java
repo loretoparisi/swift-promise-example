@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -34,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        // Calling Application class (see application tag in AndroidManifest.xml)
+        final GlobalApplication globalVariable = (GlobalApplication) getApplicationContext();
 
         // Async Task Shared Library Test
         BrowserTask task = new BrowserTask();
@@ -68,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         protected String doInBackground(String... params) {
 
             SharedClassTest sampleAPI = new SharedClassTest();
+            sampleAPI.context( getApplicationContext() );
             String apiURL = "https://api.spotify.com/v1/search?q=tania%20bowra&type=artist";
 
             Log.d("TEST", "Now calling sdk");

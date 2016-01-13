@@ -6,7 +6,15 @@ import Sugar.io;
 
 public class SharedClassTest {
 	
+	#if java
+	public func context(var context:android.content.Context) ->() {
+		Sugar.Environment.ApplicationContext = context;
+	}
+	#endif
+	
 	public func databaseSetup() -> () {
+		
+		
 		
 		// file system folder path
 		let Separator:Char=Sugar.io.folder.Separator;
