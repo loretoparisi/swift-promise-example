@@ -1,17 +1,16 @@
-﻿//
-//  Promise.swift
-//  CrossTest
-//
-//  Created by Loreto Parisi on 16/12/15.
-//  Copyright © 2015 Musixmatch. All rights reserved.
-//
+﻿/**
+* Silver Shared Project Example
+* Promise Closure Library
+* iOS and Android targets
+* @author: Loreto Parisi (loreto at musixmatch dot com )
+* @2015-2016 Loreto Parisi
+*/
 
 #if cocoa
 import Foundation;
 #endif
 
 import Sugar.IO;
-import Sugar.Data;
 
 class Promise {
 	
@@ -28,15 +27,13 @@ class Promise {
 	typealias promiseClosure = ( (AnyObject?) -> (), (AnyObject?) -> () ) -> ()
 	
 	var thens = Array<thenClosure>()
-	//var cat: (AnyObject?) -> ()
 	var cat: catchClosure?
 	var fin: finallyClosure?
-	//var fin: () -> ()
 	
 	var value: AnyObject?
 	
 	var _status: Status = .PENDING
-	private var statusObserver: (Promise) -> ()
+	var statusObserver: (Promise) -> ()
 	var status: Status {
 		get {
 			return _status
@@ -263,6 +260,7 @@ class All: Promise {
 	var total: Int {
 		get { return numberOfResolveds + numberOfRejecteds }
 	}
+	
 	private var statusToChangeTo: Status = .PENDING
 	
 	private func observe(promise: Promise) {
