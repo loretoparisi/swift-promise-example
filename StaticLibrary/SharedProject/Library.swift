@@ -30,7 +30,9 @@ public class SharedClassTest {
 		writeLn ( "Scanning \(parentPath)..." )
 		let folders:String[]=Sugar.io.FolderUtils.GetFolders(parentPath,false);
 		for f in folders {
-			writeLn(f);
+			if f.EndsWith("Documents") {
+				writeLn("Documents folder \(f)");
+			}
 		}
 		
 		if( Sugar.IO.FolderUtils.Exists(dbPath) ) {
@@ -96,7 +98,7 @@ public class SharedClassTest {
 				writeLn( result );
 				
 				while result.MoveNext() {
-					writeLn( result.GetString( 0 ) ); // col1
+					writeLn(  result.GetString( 0 ) ); // col1
 					writeLn( result.GetString( 1 ) ); // col2
 					writeLn( result.GetString( 2 ) ); // col3
 				}

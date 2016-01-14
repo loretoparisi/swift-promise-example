@@ -43,10 +43,13 @@
         <Reference Include="rtl.fx"/>
         <Reference Include="libNougat.fx"/>
         <Reference Include="libSwift.fx"/>
-        <Reference Include="libSugar.fx"/>
         <Reference Include="libSugar.Data">
             <HintPath>mylibs\libSugar.Data.fx</HintPath>
         </Reference>
+        <Reference Include="libSugar">
+            <HintPath>mylibs\libSugar.fx</HintPath>
+        </Reference>
+        <Reference Include="libsqlite3.fx"/>
     </ItemGroup>
     <ItemGroup/>
     <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Oxygene/RemObjects.Oxygene.Nougat.targets"/>
