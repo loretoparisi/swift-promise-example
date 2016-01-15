@@ -19,6 +19,9 @@ import samplelibrary.*;
 
 public class MainActivity extends AppCompatActivity {
 
+    // The Shared Library Core
+    SharedClassTest sampleAPI;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -39,9 +42,30 @@ public class MainActivity extends AppCompatActivity {
         // Calling Application class (see application tag in AndroidManifest.xml)
         final GlobalApplication globalVariable = (GlobalApplication) getApplicationContext();
 
+        // Shared Library instance
+        sampleAPI = new SharedClassTest();
+
+        // set application context
+        sampleAPI.context(getApplicationContext());
+
+        // database setup
+        sampleAPI.databaseSetup();
+
+
         // Async Task Shared Library Test
         BrowserTask task = new BrowserTask();
         task.execute();
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // set application context
+        if(sampleAPI!=null) {
+            sampleAPI.context(getApplicationContext());
+        }
 
     }
 
@@ -71,9 +95,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params) {
 
-            SharedClassTest sampleAPI = new SharedClassTest();
-            sampleAPI.context( getApplicationContext() );
-            String apiURL = "https://api.spotify.com/v1/search?q=tania%20bowra&type=artist";
+        String apiURL = "https://api.spotify.com/v1/search?q=tania%20bowra&type=artist";
 
             Log.d("TEST", "Now calling sdk");
 
@@ -83,8 +105,6 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("TEST", s);
                 }
             });
-
-            sampleAPI.databaseSetup();
 
             return null;
         }

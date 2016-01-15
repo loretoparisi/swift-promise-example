@@ -11,5 +11,7 @@
     <ItemGroup>
         <Compile Include="$(MSBuildThisFileDirectory)Library.swift"/>
         <None Include="$(MSBuildThisFileDirectory)Promise.swift"/>
+        <Compile Include="$(MSBuildThisFileDirectory)Storage.swift"/>
+        <Compile Include="$(MSBuildThisFileDirectory)Logger.swift"/>
     </ItemGroup>
 </Project>

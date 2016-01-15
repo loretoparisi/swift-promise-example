@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     */
     func databaseTest(api:SharedClassTest) -> () {
     
-        api.databaseSetup();
+        api.setup();
     
     }
     

@@ -8,11 +8,60 @@
 #import <Foundation/Foundation.h>
 
 @class SharedClassTest;
+@class Storage;
+@class MemoryStorage;
+@class PersistentStorage;
+@class DatabaseStorage;
+@class Logger;
+@class ConsoleLogger;
+@class FileLogger;
+@class RemoteLogger;
+
+typedef enum Level: int64_t {
+    Level_QUIET = 0,
+    Level_ERROR = 1,
+    Level_WARN = 2,
+    Level_INFO = 3,
+    Level_DEBUG = 4
+  } Level;
 
 @interface SharedClassTest: NSObject
 
-- (void)databaseSetup;
+- (void)setup;
 - (void)httpCall:(_Nonnull /* mapped */ NSString *)url completion:(_Nonnull void (^)(/* mapped */ NSString * ))completion;
 
+@end
+
+@interface Storage: NSObject
+
+
+@end
+
+@interface MemoryStorage: Storage
+@end
+
+@interface PersistentStorage: Storage
+@end
+
+@interface DatabaseStorage: PersistentStorage
+
+- (void)testSelect;
+
+@end
+
+@interface Logger: NSObject
+
+
+@end
+
+@interface ConsoleLogger: Logger
+
+
+@end
+
+@interface FileLogger: Logger
+@end
+
+@interface RemoteLogger: Logger
 @end
 
