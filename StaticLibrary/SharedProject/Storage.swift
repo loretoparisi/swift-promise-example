@@ -47,14 +47,12 @@ public class PersistentStorage : Storage {
 */
 public class DatabaseStorage : PersistentStorage {
 
-	// SQLite Connection
-	var conn:SQLiteConnection?;
-	
 	// Database Absolute Path
 	var dbPath:String?;
 	
-	lazy private var sharedConn:SQLiteConnection = {
-		return SQLiteConnection.init("", false, true); // name, readonly, createifneeded
+	// SQLite Lazy Connection
+	lazy var conn:SQLiteConnection? = {
+		return self.getConnection();
 	}()
 	
 	/******************
@@ -175,7 +173,7 @@ public class DatabaseStorage : PersistentStorage {
 	******************/
 		
 	public func testDatabaseStorage() -> () {
-		self.conn = getConnection();
+		//self.conn = getConnection();
 		if let dbConn = self.conn {
 			testInsert(dbConn);
 			testSelect(dbConn);
