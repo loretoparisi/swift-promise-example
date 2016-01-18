@@ -1,7 +1,6 @@
 ﻿/**
 * Silver Sugar Shared Project Example
-* Logging
-* iOS and Android targets
+* Logger Module
 * @author: Loreto Parisi (loreto at musixmatch dot com )
 * @2015-2016 Loreto Parisi
 */

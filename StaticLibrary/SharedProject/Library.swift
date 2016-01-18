@@ -1,7 +1,6 @@
 ﻿/**
 * Silver Sugar Shared Project Example
-* HTTP and Database Logic
-* iOS and Android targets
+* Shared Library
 * @author: Loreto Parisi (loreto at musixmatch dot com )
 * @2015-2016 Loreto Parisi
 */
@@ -46,7 +45,7 @@ public class SharedClassTest {
 		let systemInfo:String = "\(osName)/\(osVersion)/\(userName)/\(guid)";
 		writeLn( systemInfo );
 		
-		storage.testSelect();
+		storage.testDatabaseStorage();
 		
 	}
 	

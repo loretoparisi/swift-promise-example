@@ -1,7 +1,6 @@
 ﻿/**
 * Silver Shared Project Example
-* Promise Closure Library
-* iOS and Android targets
+* Promise Module
 * @author: Loreto Parisi (loreto at musixmatch dot com )
 * @2015-2016 Loreto Parisi
 */
