@@ -13,5 +13,6 @@
         <None Include="$(MSBuildThisFileDirectory)Promise.swift"/>
         <Compile Include="$(MSBuildThisFileDirectory)Storage.swift"/>
         <Compile Include="$(MSBuildThisFileDirectory)Logger.swift"/>
+        <Compile Include="$(MSBuildThisFileDirectory)APIClient.swift"/>
     </ItemGroup>
 </Project>

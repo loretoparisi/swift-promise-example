@@ -122,9 +122,9 @@
 		848C26391C1B4C8A006BAC15 /* CrossTest */ = {
 			isa = PBXGroup;
 			children = (
+				84A47CED1C44094F009C8F9A /* Headers */,
 				84A47D101C46F198009C8F9A /* Sugar */,
 				84A47D091C45735A009C8F9A /* StaticLibrary */,
-				84A47CED1C44094F009C8F9A /* Headers */,
 				84A47CEC1C440945009C8F9A /* Sources */,
 				84A47CF51C451B8B009C8F9A /* SwiftFactory */,
 				842AD7D41C21B9E400FFB227 /* Controller */,

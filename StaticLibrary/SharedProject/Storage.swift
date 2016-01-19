@@ -22,7 +22,7 @@ public class Storage {
 		logger = ConsoleLogger( level:level );
 	}
 	
-	init(var logger:Logger) {
+	public init(var logger:Logger) {
 		self.logger = logger;
 	}
 
@@ -137,7 +137,7 @@ public class DatabaseStorage : PersistentStorage {
 				do {
 					let dbConn:SQLiteConnection = SQLiteConnection.init(dbFilePath, false, true); // name, readonly, createifneeded
 					let SQL = "CREATE TABLE IF NOT EXISTS CACHE (ID INTEGER PRIMARY KEY AUTOINCREMENT, CACHE_KEY TEXT UNIQUE, CACHE_VALUE TEXT, TIMESTAMP TEXT);";
-					dbConn.Execute(SQL,nil);
+					try execute(dbConn, query:SQL, parameters:[]);
 					logger.debug("Database created at \(dbFilePath)");
 					return dbConn;
 				} catch let error as SQLiteException {
@@ -154,7 +154,7 @@ public class DatabaseStorage : PersistentStorage {
 			
 				let dbConn:SQLiteConnection = SQLiteConnection.init(dbFilePath, false, true); // name, readonly, createifneeded
 				let SQL = "CREATE TABLE IF NOT EXISTS CACHE (ID INTEGER PRIMARY KEY AUTOINCREMENT, CACHE_KEY TEXT UNIQUE, CACHE_VALUE TEXT, TIMESTAMP TEXT);";
-				dbConn.Execute(SQL,nil);
+				try execute(dbConn, query:SQL, parameters:[]);
 				logger.debug("Database created at \(dbFilePath)");
 				return dbConn;
 			} catch let error as SugarIOException {
@@ -172,7 +172,7 @@ public class DatabaseStorage : PersistentStorage {
 	* Test API
 	******************/
 		
-	public func testDatabaseStorage() -> () {
+	public func testDatabase() -> () {
 		//self.conn = getConnection();
 		if let dbConn = self.conn {
 			testInsert(dbConn);
