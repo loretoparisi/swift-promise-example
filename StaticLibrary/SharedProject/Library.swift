@@ -17,7 +17,7 @@ public class SharedClassTest {
 	// Console Logger
 	var logger:ConsoleLogger;
 	
-	init() {
+	public init() {
 		
 		// Logger
 		let level = Logger.Level.DEBUG;

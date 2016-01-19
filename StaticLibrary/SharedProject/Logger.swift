@@ -22,7 +22,7 @@ public class Logger {
 	// Log Level
 	var _level: Level = Level.QUIET
 	
-	init(var level:Level) {
+	public init(var level:Level) {
 		_level=level;
 	}
 	

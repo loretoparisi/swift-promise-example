@@ -11,7 +11,7 @@
         <RootNamespace>SampleLibrary</RootNamespace>
         <AssemblyName>SampleLibrary</AssemblyName>
         <CrossPlatform>True</CrossPlatform>
-        <AndroidPlatformName>android-19</AndroidPlatformName>
+        <AndroidPlatformName>android-23</AndroidPlatformName>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         <Optimize>false</Optimize>
@@ -31,7 +31,7 @@
         <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
         <AssemblyName>SampleLibrary</AssemblyName>
         <CrossPlatform>True</CrossPlatform>
-        <AndroidPlatformName>android-19</AndroidPlatformName>
+        <AndroidPlatformName>android-23</AndroidPlatformName>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <Optimize>true</Optimize>
@@ -50,7 +50,7 @@
         <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
         <AssemblyName>SampleLibrary</AssemblyName>
         <CrossPlatform>True</CrossPlatform>
-        <AndroidPlatformName>android-19</AndroidPlatformName>
+        <AndroidPlatformName>android-23</AndroidPlatformName>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="android.jar"/>

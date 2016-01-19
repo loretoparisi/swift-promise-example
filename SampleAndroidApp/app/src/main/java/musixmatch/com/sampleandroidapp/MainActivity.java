@@ -14,8 +14,8 @@ import android.os.AsyncTask;
 // Shared Library Test
 import com.remobjects.elements.system.Action1;
 
-import samplelibrary.*;
-
+import samplelibrary.SharedClassTest;
+import samplelibrary.ConsoleLogger;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,13 +43,14 @@ public class MainActivity extends AppCompatActivity {
         final GlobalApplication globalVariable = (GlobalApplication) getApplicationContext();
 
         // Shared Library instance
+
         sampleAPI = new SharedClassTest();
 
         // set application context
         sampleAPI.context(getApplicationContext());
 
         // database setup
-        sampleAPI.databaseSetup();
+        sampleAPI.setup();
 
 
         // Async Task Shared Library Test

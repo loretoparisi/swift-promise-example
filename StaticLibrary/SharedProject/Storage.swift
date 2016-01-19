@@ -17,7 +17,7 @@ public class Storage {
 	// Console Logger
 	var logger:Logger;
 	
-	init() {
+	public init() {
 		let level = Logger.Level.DEBUG;
 		logger = ConsoleLogger( level:level );
 	}
