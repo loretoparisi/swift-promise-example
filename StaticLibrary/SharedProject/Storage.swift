@@ -194,7 +194,10 @@ public class DatabaseStorage : PersistentStorage {
 			try executeInsert(conn, query:INSERT , parameters:[key,"PIPPO","20150101"]);
 			
 		} catch let error as SQLiteException {
-			logger.error("sql error",error:error);
+			logger.error("sql insert error",error:error);
+			return false;
+		} catch let error as SugarException {
+			logger.error("sql insert error",error:error);
 			return false;
 		}
 		return true;
@@ -205,8 +208,9 @@ public class DatabaseStorage : PersistentStorage {
 				
 			let SELECT = "SELECT * from CACHE"
 			let result:SQLiteQueryResult= try executeQuery(conn, query:SELECT , parameters:[]);
+			
 			while result.MoveNext() {
-				logger.debug(  result.GetString( 0 ) ); // col1
+				logger.debug( result.GetString( 0 ) ); // col1
 				logger.debug( result.GetString( 1 ) ); // col2
 				logger.debug( result.GetString( 2 ) ); // col3
 			}
