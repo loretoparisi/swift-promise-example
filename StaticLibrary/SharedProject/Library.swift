@@ -56,11 +56,14 @@ public class SharedClassTest {
 	}
 	
 	/**
-	* Perform HTTP Call
+	* Perform HTTP REST Call
 	*/
-	public func httpCall(var aUrl: String, completion: (response:String?) ->()  )	 {
-		client.testGet(aUrl, completion: { (response:String!) -> () in
-				completion( response )
+	public func getJsonObject(var aUrl: String, success: (response:String?) ->(), error: (response:Exception?) ->()  )	 {
+		client.testGetJson(aUrl, success: { (response:String!) -> () in
+				success( response )
+		},
+		error: { (response:Exception!) -> () in
+			error( response )
 		});
 	}
 	

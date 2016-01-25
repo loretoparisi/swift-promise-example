@@ -14,5 +14,9 @@
         <Compile Include="$(MSBuildThisFileDirectory)Storage.swift"/>
         <Compile Include="$(MSBuildThisFileDirectory)Logger.swift"/>
         <Compile Include="$(MSBuildThisFileDirectory)APIClient.swift"/>
+        <Compile Include="$(MSBuildThisFileDirectory)Model\BaseObject.swift"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="$(MSBuildThisFileDirectory)Model"/>
     </ItemGroup>
 </Project>

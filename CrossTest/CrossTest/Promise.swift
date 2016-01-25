@@ -148,8 +148,6 @@ class Promise {
     }
     
     private init() {
-        self.cat = (catchClosure?){(x:AnyObject?) -> () in }
-        self.fin = (finallyClosure?){() ->() in }
     }
     
     convenience init(promiseClosure: ( resolve: (AnyObject?) -> (), reject: (AnyObject?) -> () ) -> ()) {
@@ -188,7 +186,6 @@ class Promise {
     
     func catch_(catch_: catchClosure) -> Promise {
         if (self.cat != nil) { return self }
-        
         self.sync(self, closure: {
             
             if (self.status == .PENDING) {

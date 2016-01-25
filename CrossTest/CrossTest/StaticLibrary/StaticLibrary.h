@@ -16,6 +16,7 @@
 @class ConsoleLogger;
 @class FileLogger;
 @class RemoteLogger;
+@class BaseObject;
 
 typedef enum Level: int64_t {
     Level_QUIET = 0,
@@ -27,13 +28,16 @@ typedef enum Level: int64_t {
 
 @interface SharedClassTest: NSObject
 
+- (id)init;
 - (void)setup;
-- (void)httpCall:(_Nonnull /* mapped */ NSString *)url completion:(_Nonnull void (^)(/* mapped */ NSString * ))completion;
+- (void)getJsonObject:(_Nonnull /* mapped */ NSString *)aUrl success:(_Nonnull void (^)(/* mapped */ NSString * ))success error:(_Nonnull void (^)(NSException * ))error;
 
 @end
 
 @interface Storage: NSObject
 
+- (id)init;
+- (id)initWithLogger:(_Nonnull Logger *)logger;
 
 @end
 
@@ -45,12 +49,13 @@ typedef enum Level: int64_t {
 
 @interface DatabaseStorage: PersistentStorage
 
-- (void)testSelect;
+- (void)testDatabase;
 
 @end
 
 @interface Logger: NSObject
 
+- (id)initWithLevel:(_Nonnull Level)level;
 
 @end
 
@@ -63,5 +68,11 @@ typedef enum Level: int64_t {
 @end
 
 @interface RemoteLogger: Logger
+@end
+
+@interface BaseObject: NSObject
+
+- (id)init;
+
 @end
 

@@ -63,7 +63,7 @@ public class DatabaseStorage : PersistentStorage {
 	* Execute Select Query
 	* @throws SQLiteException
 	*/
-	func executeQuery(conn:SQLiteConnection!, query:String!, parameters: NSObject![]) throws -> SQLiteQueryResult {
+	func executeQuery(conn:SQLiteConnection!, query:String!, parameters: AnyObject![]) throws -> SQLiteQueryResult {
 		let RES:SQLiteQueryResult = conn.ExecuteQuery(query , parameters);
 		return RES;
 	} //executeQuery
@@ -72,7 +72,7 @@ public class DatabaseStorage : PersistentStorage {
 	* Execute and return the number of affected rows
 	* @throws SQLiteException
 	*/
-	func execute(conn:SQLiteConnection!, query:String!, parameters: NSObject![]) throws -> Int64 {
+	func execute(conn:SQLiteConnection!, query:String!, parameters: AnyObject![]) throws -> Int64 {
 		let RES:Int64 = conn.Execute(query , parameters);
 		return RES;
 	} //execute
@@ -81,7 +81,7 @@ public class DatabaseStorage : PersistentStorage {
 	* Execute insert and return the last insert id
 	* @throws SQLiteException
 	*/
-	func executeInsert(conn:SQLiteConnection!, query:String!, parameters: NSObject![]) throws -> Int64 {
+	func executeInsert(conn:SQLiteConnection!, query:String!, parameters: AnyObject![]) throws -> Int64 {
 		let RES:Int64 = conn.ExecuteInsert(query , parameters);
 		return RES;
 	} //executeInsert
@@ -175,6 +175,7 @@ public class DatabaseStorage : PersistentStorage {
 	public func testDatabase() -> () {
 		//self.conn = getConnection();
 		if let dbConn = self.conn {
+			testSelect(dbConn);
 			testInsert(dbConn);
 			testSelect(dbConn);
 		}

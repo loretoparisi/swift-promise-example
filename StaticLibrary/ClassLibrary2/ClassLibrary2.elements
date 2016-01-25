@@ -54,9 +54,6 @@
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="android.jar"/>
-        <Reference Include="com.remobjects.elements.rtl.jar">
-            <Private>True</Private>
-        </Reference>
         <Reference Include="sugar.data">
             <HintPath>mylibs\sugar.data.jar</HintPath>
             <Private>True</Private>
@@ -67,6 +64,10 @@
         </Reference>
         <Reference Include="swift">
             <HintPath>mylibs\swift.jar</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="com.remobjects.elements.rtl">
+            <HintPath>mylibs\com.remobjects.elements.rtl.jar</HintPath>
             <Private>True</Private>
         </Reference>
     </ItemGroup>

@@ -10,17 +10,17 @@ import Sugar
 /**
 * API Client
 */
-public class APIClient {
+class APIClient {
 	
 	// Console Logger
 	var logger:Logger;
 	
-	public init() {
+	public override init() {
 		let level = Logger.Level.DEBUG;
 		logger = ConsoleLogger( level:level );
 	}
 	
-	public init(var logger:Logger) {
+	public override init(var logger:Logger) {
 		self.logger = logger;
 	}
 	
@@ -37,19 +37,44 @@ public class APIClient {
 	
 	/**
 	* Http Post
+	* https://github.com/remobjects/sugar/blob/master/Sugar/JSON/JsonDocument.pas
 	*/
-	public func post(var aUrl: String, parameters: NSObject![], completion: (response:String?)) ->() {
-	
+	public func post(var aUrl: String, parameters: AnyObject![], completion: (response:String?)) ->() {
 	} //post
 	
 	/******************
 	* Test API
 	******************/
 	
+	public func testGetJson(var url: String, success: (response:String?) ->(), error: (response:Exception?) ->()  ) {
+		let jsonCallback: HttpContentResponseBlock<Sugar.Json.JsonDocument!>! = { response in 
+			if response.Success {
+				var jsonObject:Sugar.Json.JsonObject = response.Content.RootObject;
+				success( jsonObject.ToString() );
+			}
+			else {
+				error(response.Exception);
+			}
+		}
+		Http.ExecuteRequestAsJson( Url(url), jsonCallback)
+	} //testGetJson
+	
 	/**
 	* Test Call
 	*/
-	public func testGet(var url: String, completion: (response:String?) ->()  ) {
+	public func testGetContent(var url: String, success: (response:String?) ->(), error: (response:Exception?) ->()  ) {
+		Http.ExecuteRequest(Url(url), { response in
+			if response.Success {
+				response.GetContentAsString(nil) { content in
+					if content.Success {
+						success( content.Content )
+					}
+					else {
+						error(response.Exception);
+					}
+				}
+			}
+		});
 		 /*var promise = Promise { (resolve: (AnyObject?) -> (), reject: (AnyObject?) -> ()) -> () in
 			
 			/*response = API.login()
@@ -68,35 +93,6 @@ public class APIClient {
 			.finally { () -> () in
 			// Close connections, do cleanup
 		}*/
-		
-		//let jsonObj:Sugar.Json.JsonObject = Sugar.Json.JsonObject();
-		//let parsedJsonObj:Sugar.Json.JsonObject = Sugar.Json.JsonObject.Load("");
-		
-		let jsonCallback: HttpContentResponseBlock<Sugar.Json.JsonDocument!>! = { response in 
-			if response.Success {
-				var obj = response.Content.RootObject
-			}
-		}
-		Http.ExecuteRequestAsJson( Url(url), jsonCallback)
-		
-		Http.ExecuteRequest(Url( url ), { response in
-			writeLn (response )
-		})
-		
-		Http.ExecuteRequest(Url(url), { response in
-			if response.Success {
-				response.GetContentAsString(nil) { content in
-					if content.Success {
-						completion( content.Content )
-					}
-				}
-			}
-		});
-		
-		/*let plainCallback: HttpResponseBlock<String!> = { response in
-		
-		}
-		Http.ExecuteRequest(Url( url ), plainCallback)*/
-	} //testCall
+	} //testGetContent
 
 }

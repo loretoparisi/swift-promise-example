@@ -100,12 +100,19 @@ public class MainActivity extends AppCompatActivity {
 
             Log.d("TEST", "Now calling sdk");
 
-            sampleAPI.httpCall__completion(apiURL, new Action1<String>() {
-                @Override
-                public void run(String s) {
-                    Log.d("TEST", s);
-                }
-            });
+            sampleAPI.getJsonObject__success__error(apiURL, new Action1<String>() {
+                        @Override
+                        public void run(String s) {
+                            Log.d("TEST", s);
+                        }
+                    },
+
+                    new Action1<Exception>() {
+                        @Override
+                        public void run(Exception e) {
+                            Log.d("TEST", e.toString());
+                        }
+                    });
 
             return null;
         }

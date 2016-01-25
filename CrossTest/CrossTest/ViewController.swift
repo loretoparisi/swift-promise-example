@@ -55,17 +55,21 @@ class ViewController: UIViewController {
         let promise = Promise { (resolve: (AnyObject?) -> (), reject: (AnyObject?) -> ()) -> () in
             
             let apiEndpoint:String="https://api.spotify.com/v1/search?q=tania%20bowra&type=artist";
-            api.httpCall(apiEndpoint, completion: { (response:String!) -> Void in
-                resolve( response )
+            api.getJsonObject(apiEndpoint, success: { (response:String!) -> Void in
+                resolve(response);
+                }, error: { (exception:NSException!) -> Void in
+                    reject(exception);
             });
         }
         promise.then { (value) -> () in
             // Probably doing something important with this data now
+            print("REQUEST SUCCESS");
             print( value )
             }
-            
             .catch_ { (error) -> () in
                 // Display error message, log errors
+                print("REQUEST FAILED");
+                print(error)
             }
             .finally { () -> () in
                 // Close connections, do cleanup
