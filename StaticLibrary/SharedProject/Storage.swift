@@ -210,9 +210,11 @@ public class DatabaseStorage : PersistentStorage {
 			let result:SQLiteQueryResult= try executeQuery(conn, query:SELECT , parameters:[]);
 			
 			while result.MoveNext() {
-				logger.debug( result.GetString( 0 ) ); // col1
-				logger.debug( result.GetString( 1 ) ); // col2
-				logger.debug( result.GetString( 2 ) ); // col3
+				var i=0;
+				logger.debug( Convert.toString( result.GetInt( i++ ) ) ); // col0 autoinc
+				logger.debug( result.GetString( i++ ) ); // col2
+				logger.debug( result.GetString( i++ ) ); // col3
+				//logger.debug( result.GetString( i++ ) ); // col4
 			}
 			
 		} catch let error as SQLiteException {

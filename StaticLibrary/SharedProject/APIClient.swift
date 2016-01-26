@@ -50,6 +50,23 @@ class APIClient {
 		let jsonCallback: HttpContentResponseBlock<Sugar.Json.JsonDocument!>! = { response in 
 			if response.Success {
 				var jsonObject:Sugar.Json.JsonObject = response.Content.RootObject;
+				
+				let rndIndex=(Sugar.Random()).NextInt();
+				let key="USER_"+Sugar.Convert.ToString(rndIndex);
+				let now = DateTime.Now
+				let unixMsec = (now.Ticks - DateTime.TicksSince1970 ) / TimeSpan.TicksPerSecond;
+				//let today=DateTime( now.Ticks );
+				//self.logger.debug( "TODAY FROM UNIX EPOCH "  + today );
+				
+				var cacheObject:CacheObject = CacheObject(key:key,
+					value:jsonObject.ToString(),
+					timestamp: Convert.ToString( unixMsec ) );
+					cacheObject.Load( jsonObject.ToString() );
+				
+				self.logger.debug( "CACHE OBJECT "  + cacheObject.timestamp );
+				
+				
+				
 				success( jsonObject.ToString() );
 			}
 			else {

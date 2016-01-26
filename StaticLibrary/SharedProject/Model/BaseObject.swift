@@ -8,8 +8,8 @@
 /**
 * Base JSON Object Model
 */
-public class BaseObject {
-	public override init() {
-		
+public class BaseObject : Sugar.Json.JsonObject {
+	public init() {
+		super.init();
 	}
-}
+} //BaseObject
