@@ -96,11 +96,12 @@ public class DatabaseStorage : PersistentStorage {
 	private func getConnection() -> SQLiteConnection? {
 		
 		// file system folder path
+		let dbName:String="db4.sql";
 		let Separator:Char=Sugar.io.folder.Separator;
 		let userLocal:Folder=Sugar.IO.Folder.UserLocal();
 		let userLocalPath:String=userLocal.Path;
 		let dbPath:String = Sugar.io.Path.Combine(userLocalPath,"db")
-		let dbFilePath:String = Sugar.io.Path.Combine(dbPath,"db.sql")
+		let dbFilePath:String = Sugar.io.Path.Combine(dbPath,dbName)
 		
 		logger.debug("User path \(userLocalPath)");
 		logger.debug("App folder path \(dbPath)");
@@ -120,8 +121,7 @@ public class DatabaseStorage : PersistentStorage {
 		}
 		
 		if( Sugar.IO.FolderUtils.Exists(dbPath) ) { //db folder
-			let fd:File = Sugar.IO.File(dbFilePath);
-			if( fd.Exists() ) { // db file
+			if( Sugar.IO.FileUtils.Exists(dbFilePath) ) { // db file
 				
 				// db file exists
 				writeLn("Database found at \(dbFilePath)")
@@ -206,15 +206,14 @@ public class DatabaseStorage : PersistentStorage {
 	private func testSelect(conn:SQLiteConnection!) -> Bool {
 		do {
 				
-			let SELECT = "SELECT * from CACHE"
+			let SELECT = "SELECT CACHE.cache_key, CACHE.cache_value, CACHE.timestamp from CACHE"
 			let result:SQLiteQueryResult= try executeQuery(conn, query:SELECT , parameters:[]);
 			
 			while result.MoveNext() {
 				var i=0;
-				logger.debug( Convert.toString( result.GetInt( i++ ) ) ); // col0 autoinc
-				logger.debug( result.GetString( i++ ) ); // col2
-				logger.debug( result.GetString( i++ ) ); // col3
-				//logger.debug( result.GetString( i++ ) ); // col4
+				logger.debug( result.GetString( i ) ); // col1
+				logger.debug( result.GetString( ++i ) ); // col2
+				logger.debug( result.GetString( ++i ) ); // col3
 			}
 			
 		} catch let error as SQLiteException {

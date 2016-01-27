@@ -57,7 +57,7 @@
 	<key>Properties</key>
 	<dict/>
 	<key>SelectedNode</key>
-	<string>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/APIClient.swift</string>
+	<string>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/Storage.swift</string>
 	<key>ViewMetaData</key>
 	<dict>
 		<key>/Users/admin/Documents/StaticLibrary/StaticLibrary.sln---BuildLog</key>
@@ -320,9 +320,9 @@
 		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/APIClient.swift</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>14</integer>
+			<integer>103</integer>
 			<key>CursorY</key>
-			<integer>45</integer>
+			<integer>41</integer>
 			<key>ScrollX</key>
 			<real>0.0</real>
 			<key>ScrollY</key>
@@ -688,25 +688,25 @@
 		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/Storage.swift</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>12</integer>
+			<integer>50</integer>
 			<key>CursorY</key>
-			<integer>189</integer>
+			<integer>215</integer>
 			<key>ScrollX</key>
 			<real>0.0</real>
 			<key>ScrollY</key>
-			<real>2821</real>
+			<real>2812</real>
 			<key>SelectionCursorUndecided</key>
-			<true/>
+			<false/>
 			<key>SelectionEndColumn</key>
-			<integer>61</integer>
+			<integer>-1</integer>
 			<key>SelectionEndLine</key>
-			<integer>190</integer>
+			<integer>-1</integer>
 			<key>SelectionIsLinear</key>
 			<true/>
 			<key>SelectionStartColumn</key>
-			<integer>12</integer>
+			<integer>-1</integer>
 			<key>SelectionStartLine</key>
-			<integer>189</integer>
+			<integer>-1</integer>
 		</dict>
 		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/XPromise.swift</key>
 		<dict>
