@@ -9,9 +9,7 @@
 import Foundation;
 #endif
 
-import Sugar.IO;
-
-class Promise {
+public class Promise {
 	
 	enum Status: Int {
 		case PENDING = 0
@@ -23,16 +21,16 @@ class Promise {
 	typealias thenClosureNoReturn = (AnyObject?) -> ()
 	typealias catchClosure = (AnyObject?) -> ()
 	typealias finallyClosure = () -> ()
-	typealias promiseClosure = ( (AnyObject?) -> (), (AnyObject?) -> () ) -> ()
+	typealias promiseClosure = ( resolve: catchClosure, reject: catchClosure ) -> ()
 	
-	var thens = Array<thenClosure>()
+	var thens = Array<thenClosure>()?
 	var cat: catchClosure?
 	var fin: finallyClosure?
 	
 	var value: AnyObject?
 	
 	var _status: Status = .PENDING
-	var statusObserver: (Promise) -> ()
+	private var statusObserver: ( (Promise) -> () )?
 	var status: Status {
 		get {
 			return _status
@@ -46,16 +44,19 @@ class Promise {
 	private init() {
 	}
 	
-	convenience init(promiseClosure: ( resolve: (AnyObject?) -> (), reject: (AnyObject?) -> () ) -> ()) {
+	convenience init(closure: promiseClosure ) {
 		self.init()
-		
 		let deferred = Deferred(promise: self)
-		promiseClosure( resolve: deferred.resolve, reject: deferred.reject )
+		closure( resolve: deferred.resolve, reject: deferred.reject )
 	}
 	
 	class func all(promises: Array<Promise>) -> Promise {
-		let all=All(promises: promises)
-		return all
+		return All(promises);
+	}
+	
+	func promis(closure: promiseClosure ) {
+		let deferred = Deferred(promise: self)
+		closure( resolve: deferred.resolve, reject: deferred.reject )
 	}
 	
 	func then(then: thenClosureNoReturn) -> Promise {
@@ -82,7 +83,6 @@ class Promise {
 	
 	func catch_(catch_: catchClosure) -> Promise {
 		if (self.cat != nil) { return self }
-		
 		self.sync(self, closure: {
 			
 			if (self.status == .PENDING) {
@@ -112,52 +112,11 @@ class Promise {
 		return self
 	}
 	
-	func hardlock<T>(lock: AnyObject!, @noescape closure: () -> T) -> T {
+	private func sync(lock: AnyObject!, closure: () -> ())  {
 		let mylock = Object();
 		__lock mylock {
-			return closure()
+			closure()
 		}
-	}
-	
-	func fsync<T>(lock: AnyObject!, @noescape closure: () -> T) -> T {
-		if( Sugar.IO.FileUtils.Exists("lock") ) { // locked
-			fsync(lock, closure)
-		}
-		else {
-			var flock:Sugar.IO.File = Sugar.IO.Folder.UserLocal().CreateFile("lock", false);
-			var fs:Sugar.IO.FileHandle = flock.Open(Sugar.IO.FileOpenMode.ReadWrite);
-			defer {
-				fs.Close();
-				flock.Delete();
-			}
-			return closure()
-		}
-	}
-	
-	func sync<T>(lock: AnyObject!, @noescape closure: () -> T) -> T {
-		return hardlock(lock, closure: closure);
-/*#if cocoa
-		objc_sync_enter(lock)
-		defer {
-			objc_sync_exit(lock)
-		}
-		return closure()
-#else if java
-		fsync(lock, closure)
-#endif*/
-	}
-	
-	func sync(lock: AnyObject!, @noescape closure: () -> ())  {
-		hardlock(lock, closure: closure);
-/*#if cocoa
-		objc_sync_enter(lock)
-		defer {
-			objc_sync_exit(lock)
-		}
-		closure()
-#else if java
-		fsync(lock, closure)
-#endif*/
 	}
 	
 	private func doResolve(value: AnyObject?, shouldRunFinally: Bool = true) {
@@ -202,6 +161,7 @@ class Promise {
 		self.sync(self, closure: {
 			if (self.status != .PENDING) { return }
 			self.value = error
+			
 			self.cat?(self.value)
 			if (shouldRunFinally) { self.doFinally(.REJECTED) }
 		})
@@ -215,7 +175,7 @@ class Promise {
 	
 }
 
-class Deferred: Promise {
+public class Deferred: Promise {
 	
 	var promise:Promise
 	
@@ -249,7 +209,7 @@ class Deferred: Promise {
 	
 }
 
-class All: Promise {
+public class All: Promise {
 	
 	var promises = Array<Promise>()
 	
@@ -261,6 +221,21 @@ class All: Promise {
 	}
 	
 	private var statusToChangeTo: Status = .PENDING
+	
+	public init(promises: Array<Promise>) {
+		super.init()
+		self.promiseCount = promises.count
+		
+		for promise in promises {
+			let p:Promise = (promise as? Deferred == nil) ?
+				promise :
+				(promise as! Deferred).promise
+			self.promises.append(p)
+			let closure : (Promise) -> () = observe;
+			p.statusObserver = observe
+		}
+		
+	}
 	
 	private func observe(promise: Promise) {
 		self.sync(self, closure: {
@@ -303,19 +278,4 @@ class All: Promise {
 			
 		})
 	}
-	
-	init(promises: Array<Promise>) {
-		super.init()
-		self.promiseCount = promises.count
-		
-		for promise in promises {
-			let p = (promise as? Deferred == nil) ?
-				promise :
-				(promise as! Deferred).promise
-			self.promises.append(p)
-			p.statusObserver = observe
-		}
-		
-	}
-	
 }

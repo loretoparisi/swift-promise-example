@@ -8,112 +8,6 @@
 
 import Foundation;
 
-class Deferred: Promise {
-    
-    var promise:Promise
-    
-    override convenience init() {
-        self.init(promise: Promise())
-    }
-    
-    private init(promise: Promise) {
-        self.promise = promise
-    }
-    
-    func resolve(value: AnyObject?) {
-        promise.doResolve(value)
-    }
-    
-    func reject(error: AnyObject?) {
-        promise.doReject(error)
-    }
-    
-    override func then(then: thenClosure) -> Promise {
-        return promise.then(then)
-    }
-    
-    override func catch_(catch_: catchClosure) -> Promise {
-        return promise.catch_(catch_)
-    }
-    
-    override func finally(finally: finallyClosure) -> Promise {
-        return promise.finally(finally)
-    }
-    
-}
-
-class All: Promise {
-    
-    var promises = Array<Promise>()
-    
-    var promiseCount: Int = 0
-    var numberOfResolveds: Int = 0
-    var numberOfRejecteds: Int = 0
-    var total: Int {
-        get { return numberOfResolveds + numberOfRejecteds }
-    }
-    private var statusToChangeTo: Status = .PENDING
-    
-    private func observe(promise: Promise) {
-        self.sync(self, closure: {
-            switch promise.status {
-            case .RESOLVED:
-                self.numberOfResolveds++
-            case .REJECTED:
-                self.numberOfRejecteds++
-                if (self.statusToChangeTo == .PENDING) {
-                    self.statusToChangeTo = .REJECTED
-                    self.doReject(promise.value, shouldRunFinally: false)
-                }
-            default:
-                0 // noop
-            }
-            
-            if (self.total >= self.promiseCount) {
-                if (self.statusToChangeTo == .PENDING) {
-                    self.statusToChangeTo = .RESOLVED
-                    
-                    // Need to filter out nil values before mapping values to array
-                    //let filteredNils = self.promises.filter( { (p) -> (Bool) in return (p.value != nil) } )
-                    //let values = filteredNils.map( { (p) -> (AnyObject) in print(p.value); return p.value! } )
-                    
-                    var filteredNils = [AnyObject]()
-                    for el in self.promises {
-                        if(el.value != nil) {
-                            filteredNils.append(el.value!)
-                        }
-                    }
-                    
-                    var values = [AnyObject]()
-                    for el in filteredNils {
-                        values.append(el)
-                    }
-                    
-                    self.doResolve(values, shouldRunFinally: false)
-                }
-                
-                self.doFinally(self.statusToChangeTo)
-            }
-            
-        })
-    }
-    
-    init(promises: Array<Promise>) {
-        super.init()
-        self.promiseCount = promises.count
-        
-        for promise in promises {
-            let p = (promise as? Deferred == nil) ?
-                promise :
-                (promise as! Deferred).promise
-            self.promises.append(p)
-            p.statusObserver = observe
-        }
-        
-    }
-    
-}
-
 class Promise {
     
     enum Status: Int {
@@ -126,12 +20,12 @@ class Promise {
     typealias thenClosureNoReturn = (AnyObject?) -> ()
     typealias catchClosure = (AnyObject?) -> ()
     typealias finallyClosure = () -> ()
-    typealias promiseClosure = ( (AnyObject?) -> (), (AnyObject?) -> () ) -> ()
-    
+    typealias promiseClosure = ( resolve: catchClosure, reject: catchClosure ) -> ()
     
     var thens = Array<thenClosure>()
     var cat: catchClosure?
     var fin: finallyClosure?
+    var clo: promiseClosure?
     
     var value: AnyObject?
     
@@ -150,11 +44,10 @@ class Promise {
     private init() {
     }
     
-    convenience init(promiseClosure: ( resolve: (AnyObject?) -> (), reject: (AnyObject?) -> () ) -> ()) {
+    convenience init(closure: promiseClosure ) {
         self.init()
-        
         let deferred = Deferred(promise: self)
-        promiseClosure( resolve: deferred.resolve, reject: deferred.reject )
+        closure( resolve: deferred.resolve, reject: deferred.reject )
     }
     
     class func all(promises: Array<Promise>) -> Promise {
@@ -215,13 +108,6 @@ class Promise {
         return self
     }
     
-    func sync<T>(lock: AnyObject!, @noescape closure: () -> T) -> T {
-        objc_sync_enter(lock)
-        defer {
-            objc_sync_exit(lock)
-        }
-        return closure()
-    }
     func sync(lock: AnyObject!, @noescape closure: () -> ())  {
         objc_sync_enter(lock)
         defer {
@@ -282,6 +168,115 @@ class Promise {
         if (self.status != .PENDING) { return }
         self.status = status
         self.fin?()
+    }
+    
+}
+
+class Deferred: Promise {
+    
+    var promise:Promise
+    
+    override convenience init() {
+        self.init(promise: Promise())
+    }
+    
+    private init(promise: Promise) {
+        self.promise = promise
+    }
+    
+    func resolve(value: AnyObject?) {
+        promise.doResolve(value)
+    }
+    
+    func reject(error: AnyObject?) {
+        promise.doReject(error)
+    }
+    
+    override func then(then: thenClosure) -> Promise {
+        return promise.then(then)
+    }
+    
+    override func catch_(catch_: catchClosure) -> Promise {
+        return promise.catch_(catch_)
+    }
+    
+    override func finally(finally: finallyClosure) -> Promise {
+        return promise.finally(finally)
+    }
+    
+}
+
+class All: Promise {
+    
+    var promises = Array<Promise>()
+    
+    var promiseCount: Int = 0
+    var numberOfResolveds: Int = 0
+    var numberOfRejecteds: Int = 0
+    var total: Int {
+        get { return numberOfResolveds + numberOfRejecteds }
+    }
+    private var statusToChangeTo: Status = .PENDING
+    
+    private func observe(promise: Promise) {
+        self.sync(self, closure: {
+            switch promise.status {
+            case .RESOLVED:
+                self.numberOfResolveds++
+                break;
+            case .REJECTED:
+                self.numberOfRejecteds++
+                if (self.statusToChangeTo == .PENDING) {
+                    self.statusToChangeTo = .REJECTED
+                    self.doReject(promise.value, shouldRunFinally: false)
+                }
+                break;
+            default:
+                break; // noop
+            }
+            
+            if (self.total >= self.promiseCount) {
+                if (self.statusToChangeTo == .PENDING) {
+                    self.statusToChangeTo = .RESOLVED
+                    
+                    // Need to filter out nil values before mapping values to array
+                    //let filteredNils = self.promises.filter( { (p) -> (Bool) in return (p.value != nil) } )
+                    //let values = filteredNils.map( { (p) -> (AnyObject) in print(p.value); return p.value! } )
+                    
+                    var filteredNils = [AnyObject]()
+                    for el in self.promises {
+                        if(el.value != nil) {
+                            filteredNils.append(el.value!)
+                        }
+                    }
+                    
+                    var values = [AnyObject]()
+                    for el in filteredNils {
+                        values.append(el)
+                    }
+                    
+                    self.doResolve(values, shouldRunFinally: false)
+                }
+                
+                self.doFinally(self.statusToChangeTo)
+            }
+            
+        })
+    }
+    
+    init(promises: Array<Promise>) {
+        super.init()
+        self.promiseCount = promises.count
+        
+        for promise in promises {
+            let p = (promise as? Deferred == nil) ?
+                promise :
+                (promise as! Deferred).promise
+            self.promises.append(p)
+            let closure : (Promise) -> () = observe;
+            p.statusObserver = closure
+        }
+        
     }
     
 }

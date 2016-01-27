@@ -83,6 +83,9 @@ class ViewController: UIViewController {
         databaseTest(api);
         httpCallTest(api);
         
+        let epoch:NSTimeInterval = NSDate().timeIntervalSince1970;
+        print( epoch );
+        
     }
     
     override func viewDidLoad() {
