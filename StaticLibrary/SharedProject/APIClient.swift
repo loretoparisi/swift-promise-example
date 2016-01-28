@@ -49,7 +49,9 @@ class APIClient {
 	public func testGetJson(var url: String, success: (response:String?) ->(), error: (response:Exception?) ->()  ) {
 		let jsonCallback: HttpContentResponseBlock<Sugar.Json.JsonDocument!>! = { response in 
 			if response.Success {
-				var jsonObject:Sugar.Json.JsonObject = response.Content.RootObject;
+				
+				// Json Object Response
+				let jsonObject:Sugar.Json.JsonObject = response.Content.RootObject;
 				
 				let rndIndex=(Sugar.Random()).NextInt();
 				let key="USER_"+Sugar.Convert.ToString(rndIndex);
@@ -59,12 +61,23 @@ class APIClient {
 				var cacheObject:CacheObject = CacheObject(key:key,
 					value:jsonObject.ToString(),
 					timestamp: Convert.ToString( unixMsec ) );
-					
-				cacheObject.Load( jsonObject.ToString() );
+				 
+				 self.logger.debug( "CACHE OBJECT "  + cacheObject.timestamp );
+				  
+				let myObject:Sugar.Json.JsonObject = Sugar.Json.JsonObject.Load( jsonObject.ToString() );
+				if let obj = myObject {
+					let props = obj.Keys;
+					for el in props {
+						if let value = obj.Item[el] {
+							self.logger.debug( "\(el)=\(value.ToJson())" )
+						}
+					}
+					success( obj.ToJson() );
+				}
+				else {
+					success( jsonObject.ToJson() );
+				}
 				
-				self.logger.debug( "CACHE OBJECT "  + cacheObject.timestamp );
-				
-				success( jsonObject.ToString() );
 			}
 			else {
 				error(response.Exception);

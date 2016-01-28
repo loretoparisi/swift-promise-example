@@ -1,0 +1,10 @@
+/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/NetClassLibrary/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.pas
+/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/NetClassLibrary/obj/Debug/NetClassLibrary.Properties.Resources.resources
+/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/NetClassLibrary/bin/Debug/NetClassLibrary.dll.mdb
+/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/NetClassLibrary/bin/Debug/NetClassLibrary.dll
+/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/NetClassLibrary/obj/Debug/NetClassLibrary.dll
+/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/NetClassLibrary/obj/Debug/NetClassLibrary.dll.mdb
+/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/NetClassLibrary/bin/Debug/Swift.dll
+/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/NetClassLibrary/bin/Debug/RemObjects.Elements.Dynamic.dll
+/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/NetClassLibrary/bin/Debug/Sugar.dll
+/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/NetClassLibrary/bin/Debug/Sugar.Data.dll

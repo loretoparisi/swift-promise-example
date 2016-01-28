@@ -9,6 +9,7 @@ import Sugar
 import Sugar.data;
 import Sugar.io;
 
+
 public class SharedClassTest {
 	
 	// Database Storage

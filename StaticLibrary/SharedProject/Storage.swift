@@ -108,8 +108,8 @@ public class DatabaseStorage : PersistentStorage {
 		logger.debug("Database path \(dbFilePath)");
 		
 		// scan app sub-folders
-		var parentPath:String = Path.GetParentDirectory(userLocalPath)?
-		if parentPath!=nil {
+		/*var parentPath:String = Path.GetParentDirectory(userLocalPath)?
+		if parentPath!=nil && parentPath != "" {
 			parentPath=Path.GetParentDirectory( parentPath );
 			writeLn ( "Scanning \(parentPath)..." )
 			let folders:String[]=Sugar.io.FolderUtils.GetFolders(parentPath,false);
@@ -118,7 +118,7 @@ public class DatabaseStorage : PersistentStorage {
 					logger.debug("Documents folder \(f)");
 					}
 			}
-		}
+		}*/
 		
 		if( Sugar.IO.FolderUtils.Exists(dbPath) ) { //db folder
 			if( Sugar.IO.FileUtils.Exists(dbFilePath) ) { // db file
@@ -172,8 +172,10 @@ public class DatabaseStorage : PersistentStorage {
 	* Test API
 	******************/
 		
+	/**
+	* Test the database connection and statements
+	*/
 	public func testDatabase() -> () {
-		//self.conn = getConnection();
 		if let dbConn = self.conn {
 			testSelect(dbConn);
 			testInsert(dbConn);
@@ -184,6 +186,9 @@ public class DatabaseStorage : PersistentStorage {
 		}
 	}
 	
+	/**
+	* Test a Insert statement
+	*/
 	private func testInsert(conn:SQLiteConnection!) -> Bool {
 		do {
 				
@@ -203,6 +208,9 @@ public class DatabaseStorage : PersistentStorage {
 		return true;
 	} //testInsert
 	
+	/**
+	* Test a Select statement
+	*/
 	private func testSelect(conn:SQLiteConnection!) -> Bool {
 		do {
 				
@@ -222,6 +230,19 @@ public class DatabaseStorage : PersistentStorage {
 		}
 		return true;
 	} //testSelect
+	
+	/**
+	* Test Object Insert
+	*/
+	private func testInsertObject(object:BaseObject!) -> Bool {
+		if let dbConn = self.conn {
+			return true;
+		}
+		else {
+			logger.error("Database error",error:nil);
+			return false;
+		}
+	}
 	
 }
 

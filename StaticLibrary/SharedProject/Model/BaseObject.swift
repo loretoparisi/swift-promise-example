@@ -5,6 +5,8 @@
 * @2015-2016 Loreto Parisi
 */
 
+import Sugar.Json;
+
 /**
 * Base JSON Object Model
 */

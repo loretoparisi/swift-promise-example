@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{24598180-92F2-4D83-8F0F-6084B36D9B1A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>NetConsoleApplication</RootNamespace>
+    <AssemblyName>NetConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="RemObjects.Elements.Dynamic">
+      <HintPath>..\..\StaticLibrary\NetClassLibrary\bin\Debug\RemObjects.Elements.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Sugar.Data">
+      <HintPath>..\..\StaticLibrary\NetClassLibrary\bin\Debug\Sugar.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Sugar">
+      <HintPath>..\..\StaticLibrary\NetClassLibrary\bin\Debug\Sugar.dll</HintPath>
+    </Reference>
+    <Reference Include="Swift">
+      <HintPath>..\..\StaticLibrary\NetClassLibrary\bin\Debug\Swift.dll</HintPath>
+    </Reference>
+    <Reference Include="NetClassLibrary">
+      <HintPath>..\..\StaticLibrary\NetClassLibrary\bin\Debug\NetClassLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

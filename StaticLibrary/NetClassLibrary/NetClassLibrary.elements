@@ -1,0 +1,94 @@
+<?xml version="1.0" standalone="no"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+    <PropertyGroup>
+        <ProductVersion>3.5</ProductVersion>
+        <RootNamespace>NetClassLibrary</RootNamespace>
+        <ProjectGuid>92230240-50B4-4EE8-A81A-F7EA8ED5AD76</ProjectGuid>
+        <OutputType>library</OutputType>
+        <AssemblyName>NetClassLibrary</AssemblyName>
+        <AllowGlobals>False</AllowGlobals>
+        <AllowLegacyWith>False</AllowLegacyWith>
+        <AllowLegacyOutParams>False</AllowLegacyOutParams>
+        <AllowLegacyCreate>False</AllowLegacyCreate>
+        <AllowUnsafeCode>False</AllowUnsafeCode>
+        <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+        <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+        <MinFrameworkVersionRequired>4.0</MinFrameworkVersionRequired>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <Optimize>false</Optimize>
+        <OutputPath>.\bin\Debug</OutputPath>
+        <DefineConstants>DEBUG;TRACE;</DefineConstants>
+        <GeneratePDB>True</GeneratePDB>
+        <GenerateMDB>True</GenerateMDB>
+        <EnableAsserts>True</EnableAsserts>
+        <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+        <CaptureConsoleOutput>False</CaptureConsoleOutput>
+        <StartMode>Project</StartMode>
+        <RegisterForComInterop>False</RegisterForComInterop>
+        <CpuType>anycpu</CpuType>
+        <RuntimeVersion>v25</RuntimeVersion>
+        <XmlDoc>False</XmlDoc>
+        <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
+        <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+        <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <Optimize>true</Optimize>
+        <OutputPath>.\bin\Release</OutputPath>
+        <GeneratePDB>False</GeneratePDB>
+        <GenerateMDB>False</GenerateMDB>
+        <EnableAsserts>False</EnableAsserts>
+        <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+        <CaptureConsoleOutput>False</CaptureConsoleOutput>
+        <StartMode>Project</StartMode>
+        <RegisterForComInterop>False</RegisterForComInterop>
+        <CpuType>anycpu</CpuType>
+        <RuntimeVersion>v25</RuntimeVersion>
+        <XmlDoc>False</XmlDoc>
+        <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
+        <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+        <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="mscorlib"/>
+        <Reference Include="System"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Xml"/>
+        <Reference Include="System.Core">
+            <RequiredTargetFramework>3.5</RequiredTargetFramework>
+        </Reference>
+        <Reference Include="System.Xml.Linq">
+            <RequiredTargetFramework>3.5</RequiredTargetFramework>
+        </Reference>
+        <Reference Include="System.Data.DataSetExtensions">
+            <RequiredTargetFramework>3.5</RequiredTargetFramework>
+        </Reference>
+        <Reference Include="Swift">
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="RemObjects.Elements.Dynamic">
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Sugar.dll">
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Sugar.Data">
+            <HintPath>mylibs\Sugar.Data.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Properties\AssemblyInfo.swift"/>
+        <EmbeddedResource Include="Properties\Resources.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
+        <Compile Include="Properties\Resources.Designer.swift"/>
+        <None Include="Properties\Settings.settings">
+            <Generator>SettingsSingleFileGenerator</Generator>
+        </None>
+        <Compile Include="Properties\Settings.Designer.swift"/>
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Oxygene/RemObjects.Oxygene.Echoes.targets"/>
+    <Import Project="\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\SharedProject\SharedProject.projitems" Label="Shared"/>
+</Project>
