@@ -15,6 +15,7 @@
         <Compile Include="$(MSBuildThisFileDirectory)src\API\APIClient.swift"/>
         <Compile Include="$(MSBuildThisFileDirectory)src\Model\BaseObject.swift"/>
         <Compile Include="$(MSBuildThisFileDirectory)src\Model\CacheObject.swift"/>
+        <None Include="$(MSBuildThisFileDirectory)src\Utils\Promise.swift"/>
     </ItemGroup>
     <ItemGroup>
         <Folder Include="$(MSBuildThisFileDirectory)src\Model"/>
