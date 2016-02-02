@@ -6,11 +6,8 @@
 */
 
 import Sugar
-import Sugar.data;
-import Sugar.io;
 
-
-public class SharedLibrary {
+public class SharedClassTest {
 	
 	// Database Storage
 	var storage:DatabaseStorage;

@@ -6,8 +6,8 @@
 */
 
 import Sugar
-import Sugar.data;
-import Sugar.io;
+import Sugar.Data;
+import Sugar.IO;
 
 /**
 * Storage Common Handlers
@@ -99,11 +99,11 @@ public class DatabaseStorage : PersistentStorage {
 	private func getConnection() -> SQLiteConnection? {
 		
 		// file system folder path
-		let Separator:Char=Sugar.io.folder.Separator;
+		let Separator:Char=Sugar.IO.Folder.Separator;
 		let userLocal:Folder=Sugar.IO.Folder.UserLocal();
 		let userLocalPath:String=userLocal.Path;
-		let dbPath:String = Sugar.io.Path.Combine(userLocalPath,"db")
-		let dbFilePath:String = Sugar.io.Path.Combine(dbPath,DBNAME)
+		let dbPath:String = Sugar.IO.Path.Combine(userLocalPath,"db")
+		let dbFilePath:String = Sugar.IO.Path.Combine(dbPath,DBNAME)
 		
 		logger.debug("User path \(userLocalPath)");
 		logger.debug("App folder path \(dbPath)");
