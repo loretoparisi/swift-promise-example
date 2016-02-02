@@ -50,6 +50,7 @@ class APIClient {
 		let jsonCallback: HttpContentResponseBlock<Sugar.Json.JsonDocument!>! = { response in 
 			if response.Success {
 				
+				
 				// Json Object Response
 				let jsonObject:Sugar.Json.JsonObject = response.Content.RootObject;
 				
@@ -62,7 +63,7 @@ class APIClient {
 					value:jsonObject.ToString(),
 					timestamp: Convert.ToString( unixMsec ) );
 				 
-				 self.logger.debug( "CACHE OBJECT "  + cacheObject.timestamp );
+				self.logger.debug( "CACHE OBJECT "  + cacheObject.timestamp );
 				  
 				let myObject:Sugar.Json.JsonObject = Sugar.Json.JsonObject.Load( jsonObject.ToString() );
 				if let obj = myObject {

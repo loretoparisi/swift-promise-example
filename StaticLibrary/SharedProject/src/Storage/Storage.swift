@@ -46,6 +46,9 @@ public class PersistentStorage : Storage {
 * Database Persistent Storage
 */
 public class DatabaseStorage : PersistentStorage {
+	
+	// Database name
+	let DBNAME:String = "db4.sq";
 
 	// Database Absolute Path
 	var dbPath:String?;
@@ -96,12 +99,11 @@ public class DatabaseStorage : PersistentStorage {
 	private func getConnection() -> SQLiteConnection? {
 		
 		// file system folder path
-		let dbName:String="db4.sql";
 		let Separator:Char=Sugar.io.folder.Separator;
 		let userLocal:Folder=Sugar.IO.Folder.UserLocal();
 		let userLocalPath:String=userLocal.Path;
 		let dbPath:String = Sugar.io.Path.Combine(userLocalPath,"db")
-		let dbFilePath:String = Sugar.io.Path.Combine(dbPath,dbName)
+		let dbFilePath:String = Sugar.io.Path.Combine(dbPath,DBNAME)
 		
 		logger.debug("User path \(userLocalPath)");
 		logger.debug("App folder path \(dbPath)");

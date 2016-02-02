@@ -9,15 +9,17 @@
         <Import_RootNamespace>SharedProject</Import_RootNamespace>
     </PropertyGroup>
     <ItemGroup>
-        <Compile Include="$(MSBuildThisFileDirectory)Library.swift"/>
-        <None Include="$(MSBuildThisFileDirectory)Promise.swift"/>
-        <Compile Include="$(MSBuildThisFileDirectory)Storage.swift"/>
-        <Compile Include="$(MSBuildThisFileDirectory)Logger.swift"/>
-        <Compile Include="$(MSBuildThisFileDirectory)APIClient.swift"/>
-        <Compile Include="$(MSBuildThisFileDirectory)Model\BaseObject.swift"/>
-        <Compile Include="$(MSBuildThisFileDirectory)Model\CacheObject.swift"/>
+        <Compile Include="$(MSBuildThisFileDirectory)src\Library.swift"/>
+        <Compile Include="$(MSBuildThisFileDirectory)src\Storage\Storage.swift"/>
+        <Compile Include="$(MSBuildThisFileDirectory)src\Utils\Logger.swift"/>
+        <Compile Include="$(MSBuildThisFileDirectory)src\API\APIClient.swift"/>
+        <Compile Include="$(MSBuildThisFileDirectory)src\Model\BaseObject.swift"/>
+        <Compile Include="$(MSBuildThisFileDirectory)src\Model\CacheObject.swift"/>
     </ItemGroup>
     <ItemGroup>
-        <Folder Include="$(MSBuildThisFileDirectory)Model"/>
+        <Folder Include="$(MSBuildThisFileDirectory)src\Model"/>
+        <Folder Include="$(MSBuildThisFileDirectory)src\Storage"/>
+        <Folder Include="$(MSBuildThisFileDirectory)src\API"/>
+        <Folder Include="$(MSBuildThisFileDirectory)src\Utils"/>
     </ItemGroup>
 </Project>

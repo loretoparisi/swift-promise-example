@@ -1,1 +1,12 @@
-﻿<Properties StartupItem="NetConsoleApplication/NetConsoleApplication.csproj" />
+﻿<Properties StartupItem="NetConsoleApplication/NetConsoleApplication.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="NetConsoleApplication/Program.cs">
+    <Files>
+      <File FileName="NetConsoleApplication/Program.cs" Line="25" Column="35" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
