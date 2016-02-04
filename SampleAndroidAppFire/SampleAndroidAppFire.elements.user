@@ -1,7 +1,8 @@
-
+<?xml version="1.0" standalone="no"?>
 <Project xmlns='http://schemas.microsoft.com/developer/msbuild/2003'>
     <PropertyGroup>
         <CrossBoxDevice>Nexus 7</CrossBoxDevice>
         <CrossBoxDeviceID>0a21584f</CrossBoxDeviceID>
+        <CrossPlatform>True</CrossPlatform>
     </PropertyGroup>
 </Project>

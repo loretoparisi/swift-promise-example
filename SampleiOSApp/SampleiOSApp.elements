@@ -11,12 +11,13 @@
         <AllowLegacyCreate>False</AllowLegacyCreate>
         <AllowUnsafeCode>False</AllowUnsafeCode>
         <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
-        <SDK>iOS</SDK>
+        <SDK>iOS 9.2</SDK>
         <CreateAppBundle>True</CreateAppBundle>
         <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
         <MinFrameworkVersionRequired>4.0</MinFrameworkVersionRequired>
         <BundleIdentifier>org.me.sampleiosapp</BundleIdentifier>
         <CodesignCertificateName>iPhone Developer: Loreto Parisi (HFX54548Y7)</CodesignCertificateName>
+        <CrossPlatform>False</CrossPlatform>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         <Optimize>false</Optimize>
@@ -28,6 +29,7 @@
         <CaptureConsoleOutput>False</CaptureConsoleOutput>
         <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
         <CodesignCertificateName>iPhone Developer: Loreto Parisi (HFX54548Y7)</CodesignCertificateName>
+        <CrossPlatform>False</CrossPlatform>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <Optimize>true</Optimize>
@@ -40,6 +42,7 @@
         <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
         <CreateIPA>True</CreateIPA>
         <CodesignCertificateName>iPhone Developer: Loreto Parisi (HFX54548Y7)</CodesignCertificateName>
+        <CrossPlatform>False</CrossPlatform>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="CoreGraphics.fx"/>
@@ -48,11 +51,10 @@
         <Reference Include="rtl.fx"/>
         <Reference Include="libNougat.fx"/>
         <Reference Include="libSwift.fx"/>
+        <Reference Include="libsqlite3.fx"/>
         <Reference Include="libSugar">
             <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\mylibs\libSugar.fx</HintPath>
         </Reference>
-        <Reference Include="libsqlite3.fx"/>
-        <Reference Include="libDataAbstract.fx"/>
         <Reference Include="libSugar.Data">
             <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\mylibs\libSugar.Data.fx</HintPath>
         </Reference>
@@ -84,5 +86,5 @@
         <Storyboard Include="Resources\MainStoryboard~iPhone.storyboard"/>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Oxygene/RemObjects.Oxygene.Nougat.targets"/>
-    <Import Project="\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\SharedProject\SharedProject.projitems" Label="Shared"/>
+    <Import Project="/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.projitems" Label="Shared"/>
 </Project>

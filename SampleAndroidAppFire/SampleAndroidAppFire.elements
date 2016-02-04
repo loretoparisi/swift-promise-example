@@ -28,6 +28,7 @@
         <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
         <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
         <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
+        <CrossPlatform>True</CrossPlatform>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <Optimize>true</Optimize>
@@ -76,16 +77,12 @@
     </ItemGroup>
     <ItemGroup>
         <Reference Include="android.jar"/>
-        <Reference Include="swift.jar">
-            <Private>True</Private>
-        </Reference>
+        <Reference Include="swift.jar"/>
         <Reference Include="sugar.data">
             <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\ClassLibrary2\mylibs\sugar.data.jar</HintPath>
-            <Private>True</Private>
         </Reference>
         <Reference Include="sugar">
             <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\ClassLibrary2\mylibs\sugar.jar</HintPath>
-            <Private>True</Private>
         </Reference>
         <Reference Include="Cooper">
             <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\ClassLibrary2\mylibs\Cooper.jar</HintPath>
@@ -96,5 +93,5 @@
         <Compile Include="MainActivity.swift"/>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Oxygene/RemObjects.Oxygene.Cooper.Android.targets"/>
-    <Import Project="\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\SharedProject\SharedProject.projitems" Label="Shared"/>
+    <Import Project="/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.projitems" Label="Shared"/>
 </Project>
