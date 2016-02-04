@@ -56,8 +56,20 @@ public class SharedClassTest {
 	/**
 	* Perform HTTP REST Call
 	*/
-	public func getJsonObject(var aUrl: String, success: (response:String?) ->(), error: (response:Exception?) ->()  )	 {
-		client.testGetJson(aUrl, success: { (response:String!) -> () in
+	public func getJsonObject(var aUrl: String, success: (response:CacheObject?) ->(), error: (response:Exception?) ->()  )	 {
+		client.testGetJsonObject(aUrl, success: { (response:CacheObject!) -> () in
+				success( response )
+		},
+		error: { (response:Exception!) -> () in
+			error( response )
+		});
+	}
+	
+	/**
+	* Perform HTTP REST Call
+	*/
+	public func getJsonString(var aUrl: String, success: (response:String?) ->(), error: (response:Exception?) ->()  )	 {
+		client.testGetJsonString(aUrl, success: { (response:String!) -> () in
 				success( response )
 		},
 		error: { (response:Exception!) -> () in

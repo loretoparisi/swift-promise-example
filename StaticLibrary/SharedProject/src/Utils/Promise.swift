@@ -50,9 +50,9 @@ public class Promise {
 		closure( resolve: deferred.resolve, reject: deferred.reject )
 	}
 	
-	class func all(promises: Array<Promise>) -> Promise {
+	/*class func all(promises: Array<Promise>) -> Promise {
 		return All(promises);
-	}
+	}*/
 	
 	func promis(closure: promiseClosure ) {
 		let deferred = Deferred(promise: self)

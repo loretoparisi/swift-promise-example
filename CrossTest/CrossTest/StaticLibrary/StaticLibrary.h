@@ -17,6 +17,7 @@
 @class FileLogger;
 @class RemoteLogger;
 @class BaseObject;
+@class CacheObject;
 
 typedef enum Level: int64_t {
     Level_QUIET = 0,
@@ -30,7 +31,8 @@ typedef enum Level: int64_t {
 
 - (id)init;
 - (void)setup;
-- (void)getJsonObject:(_Nonnull /* mapped */ NSString *)aUrl success:(_Nonnull void (^)(/* mapped */ NSString * ))success error:(_Nonnull void (^)(NSException * ))error;
+- (void)getJsonObject:(_Nonnull /* mapped */ NSString *)aUrl success:(_Nonnull void (^)(CacheObject * ))success error:(_Nonnull void (^)(NSException * ))error;
+- (void)getJsonString:(_Nonnull /* mapped */ NSString *)aUrl success:(_Nonnull void (^)(/* mapped */ NSString * ))success error:(_Nonnull void (^)(NSException * ))error;
 
 @end
 
@@ -70,9 +72,15 @@ typedef enum Level: int64_t {
 @interface RemoteLogger: Logger
 @end
 
-@interface BaseObject: NSObject
+@interface BaseObject: JsonObject
 
 - (id)init;
+
+@end
+
+@interface CacheObject: BaseObject
+
+- (id)initWithKey:(NSString *)key value:(NSString *)value timestamp:(NSString *)timestamp;
 
 @end
 

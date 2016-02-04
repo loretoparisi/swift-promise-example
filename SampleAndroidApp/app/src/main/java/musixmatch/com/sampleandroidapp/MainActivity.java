@@ -14,6 +14,7 @@ import android.os.AsyncTask;
 // Shared Library Test
 import com.remobjects.elements.system.Action1;
 
+import samplelibrary.CacheObject;
 import samplelibrary.SharedClassTest;
 import samplelibrary.ConsoleLogger;
 
@@ -100,7 +101,21 @@ public class MainActivity extends AppCompatActivity {
 
             Log.d("TEST", "Now calling sdk");
 
-            sampleAPI.getJsonObject__success__error(apiURL, new Action1<String>() {
+            Action1<CacheObject> success = new Action1<CacheObject>() {
+                @Override
+                public void run(CacheObject keyValuePairs) {
+                    Log.d("TEST", keyValuePairs.toString() );
+                }
+            };
+            Action1<Exception> error = new Action1<Exception>() {
+                @Override
+                public void run(Exception e) {
+
+                }
+            };
+            sampleAPI.getJsonObject__success__error(apiURL, success,error);
+
+            sampleAPI.getJsonString__success__error(apiURL, new Action1<String>() {
                         @Override
                         public void run(String s) {
                             Log.d("TEST", s);

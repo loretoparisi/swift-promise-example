@@ -3,6 +3,8 @@
     <PropertyGroup>
         <AndroidPlatformName>android-23</AndroidPlatformName>
         <AssemblyName>SampleLibrary</AssemblyName>
+        <CrossBoxDevice>Nexus 7</CrossBoxDevice>
+        <CrossBoxDeviceID>0a21584f</CrossBoxDeviceID>
         <CrossPlatform>True</CrossPlatform>
     </PropertyGroup>
 </Project>

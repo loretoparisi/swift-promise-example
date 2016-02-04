@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # RemObjects Fire
 Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "NetClassLibrary", "NetClassLibrary\NetClassLibrary.elements", "{92230240-50B4-4EE8-A81A-F7EA8ED5AD76}"
 EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SampleAndroidAppFire", "..\..\..\..\Developmemt\ParisiLabs\swift-promise-example\SampleAndroidAppFire\SampleAndroidAppFire.elements", "{96DB84CE-946D-4F4E-9C47-1D8DE901ADF3}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SampleiOSApp", "..\..\..\..\Developmemt\ParisiLabs\swift-promise-example\SampleiOSApp\SampleiOSApp.elements", "{83A09A9A-244B-45A2-AAC4-1E50F6FF11E9}"
+EndProject
 Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SharedProject", "SharedProject\SharedProject.elements", "{C1A5F12B-B7E9-4613-9874-985BEAA4D987}"
 EndProject
 Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "StaticLibrary", "StaticLibrary.elements", "{0379A90E-1528-4287-B936-8E5758288878}"
@@ -22,12 +26,18 @@ Global
 		{92230240-50B4-4EE8-A81A-F7EA8ED5AD76}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
 		{92230240-50B4-4EE8-A81A-F7EA8ED5AD76}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
 		{92230240-50B4-4EE8-A81A-F7EA8ED5AD76}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{96DB84CE-946D-4F4E-9C47-1D8DE901ADF3}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{96DB84CE-946D-4F4E-9C47-1D8DE901ADF3}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{96DB84CE-946D-4F4E-9C47-1D8DE901ADF3}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{96DB84CE-946D-4F4E-9C47-1D8DE901ADF3}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{83A09A9A-244B-45A2-AAC4-1E50F6FF11E9}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{83A09A9A-244B-45A2-AAC4-1E50F6FF11E9}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{83A09A9A-244B-45A2-AAC4-1E50F6FF11E9}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{83A09A9A-244B-45A2-AAC4-1E50F6FF11E9}.Release|AnyCPU.Build.0 = Release|AnyCPU
 		{C1A5F12B-B7E9-4613-9874-985BEAA4D987}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
 		{C1A5F12B-B7E9-4613-9874-985BEAA4D987}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
 		{0379A90E-1528-4287-B936-8E5758288878}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
-		{0379A90E-1528-4287-B936-8E5758288878}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
 		{0379A90E-1528-4287-B936-8E5758288878}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
-		{0379A90E-1528-4287-B936-8E5758288878}.Release|AnyCPU.Build.0 = Release|AnyCPU
 		{F650959E-6784-4F2E-B6EE-D877D82E2690}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
 		{F650959E-6784-4F2E-B6EE-D877D82E2690}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
 		{F650959E-6784-4F2E-B6EE-D877D82E2690}.Release|AnyCPU.ActiveCfg = Release|AnyCPU

@@ -29,7 +29,7 @@ namespace NetConsoleApplication
 				Console.WriteLine("Error");
 				Console.WriteLine(exception);
 			};
-			sampleAPI.getJsonObject__success__error(apiURL, success, error);
+			sampleAPI.getJsonString__success__error(apiURL, success, error);
 
 			Console.WriteLine();
 		}

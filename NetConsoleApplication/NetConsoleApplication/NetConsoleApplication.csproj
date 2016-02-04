@@ -32,19 +32,24 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="RemObjects.Elements.Dynamic">
-      <HintPath>..\..\StaticLibrary\NetClassLibrary\bin\Debug\RemObjects.Elements.Dynamic.dll</HintPath>
+      <HintPath>..\..\StaticLibrary\NetClassLibrary\mylibs\RemObjects.Elements.Dynamic.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sugar.Data">
-      <HintPath>..\..\StaticLibrary\NetClassLibrary\bin\Debug\Sugar.Data.dll</HintPath>
+      <HintPath>..\..\StaticLibrary\NetClassLibrary\mylibs\Sugar.Data.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sugar">
-      <HintPath>..\..\StaticLibrary\NetClassLibrary\bin\Debug\Sugar.dll</HintPath>
+      <HintPath>..\..\StaticLibrary\NetClassLibrary\mylibs\Sugar.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Swift">
-      <HintPath>..\..\StaticLibrary\NetClassLibrary\bin\Debug\Swift.dll</HintPath>
+      <HintPath>..\..\StaticLibrary\NetClassLibrary\mylibs\Swift.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="NetClassLibrary">
       <HintPath>..\..\StaticLibrary\NetClassLibrary\bin\Debug\NetClassLibrary.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>

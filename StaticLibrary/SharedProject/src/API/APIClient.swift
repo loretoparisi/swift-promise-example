@@ -46,7 +46,10 @@ class APIClient {
 	* Test API
 	******************/
 	
-	public func testGetJson(var url: String, success: (response:String?) ->(), error: (response:Exception?) ->()  ) {
+	/**
+	* Retrieve a json string
+	*/
+	public func testGetJsonString(var url: String, success: (response:String?) ->(), error: (response:Exception?) ->()  ) {
 		let jsonCallback: HttpContentResponseBlock<Sugar.Json.JsonDocument!>! = { response in 
 			if response.Success {
 				
@@ -78,6 +81,38 @@ class APIClient {
 				else {
 					success( jsonObject.ToJson() );
 				}
+				
+			}
+			else {
+				error(response.Exception);
+			}
+		}
+		Http.ExecuteRequestAsJson( Url(url), jsonCallback)
+	} //testGetJson
+	
+	/**
+	* Retrieve a json object
+	*/
+	public func testGetJsonObject(var url: String, success: (response:CacheObject?) ->(), error: (response:Exception?) ->()  ) {
+		let jsonCallback: HttpContentResponseBlock<Sugar.Json.JsonDocument!>! = { response in 
+			if response.Success {
+				
+				
+				// Json Object Response
+				let jsonObject:Sugar.Json.JsonObject = response.Content.RootObject;
+				
+				let rndIndex=(Sugar.Random()).NextInt();
+				let key="USER_"+Sugar.Convert.ToString(rndIndex);
+				let now = DateTime.Now
+				let unixMsec = (now.Ticks - DateTime.TicksSince1970 ) / TimeSpan.TicksPerSecond;
+				
+				var cacheObject:CacheObject = CacheObject(key:key,
+					value:jsonObject.ToString(),
+					timestamp: Convert.ToString( unixMsec ) );
+				 
+				self.logger.debug( "CACHE OBJECT "  + cacheObject.timestamp );
+				  
+				success( cacheObject );
 				
 			}
 			else {

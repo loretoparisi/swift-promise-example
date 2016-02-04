@@ -1,0 +1,10 @@
+
+<Project xmlns='http://schemas.microsoft.com/developer/msbuild/2003'>
+    <PropertyGroup>
+        <CodesignCertificateName>iPhone Developer: Loreto Parisi (HFX54548Y7)</CodesignCertificateName>
+        <CrossBoxDevice>iPhone6Loreto</CrossBoxDevice>
+        <CrossBoxDeviceID>d5a89e7ee3f07d9a69d1836fe8458680dc1f06c9</CrossBoxDeviceID>
+        <ProvisioningProfile>243e96c0-69a8-42e9-831f-6192a0792b4e</ProvisioningProfile>
+        <ProvisioningProfileName>iOSTeam Provisioning Profile: * [67LHJQ26PL — musiXmatch srl]</ProvisioningProfileName>
+    </PropertyGroup>
+</Project>

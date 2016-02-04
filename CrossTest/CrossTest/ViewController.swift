@@ -60,6 +60,7 @@ class ViewController: UIViewController {
                 }, error: { (exception:NSException!) -> Void in
                     reject(exception);
             });
+            
         }
         promise.then { (value) -> () in
             // Probably doing something important with this data now
