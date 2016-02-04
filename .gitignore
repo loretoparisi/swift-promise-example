@@ -4,6 +4,8 @@ StaticLibrary/ClassLibrary2/bin/
 StaticLibrary/ClassLibrary2/obj/
 StaticLibrary/bin/
 StaticLibrary/obj/
+StaticLibrary/NetClassLibrary/bin/
+StaticLibrary/NetClassLibrary/obj/
 build/
 .DS_Store
 *.pbxuser

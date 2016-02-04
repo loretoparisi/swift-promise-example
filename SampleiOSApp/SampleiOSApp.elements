@@ -48,6 +48,14 @@
         <Reference Include="rtl.fx"/>
         <Reference Include="libNougat.fx"/>
         <Reference Include="libSwift.fx"/>
+        <Reference Include="libSugar">
+            <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\mylibs\libSugar.fx</HintPath>
+        </Reference>
+        <Reference Include="libsqlite3.fx"/>
+        <Reference Include="libDataAbstract.fx"/>
+        <Reference Include="libSugar.Data">
+            <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\mylibs\libSugar.Data.fx</HintPath>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="AppDelegate.swift"/>
@@ -76,4 +84,5 @@
         <Storyboard Include="Resources\MainStoryboard~iPhone.storyboard"/>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Oxygene/RemObjects.Oxygene.Nougat.targets"/>
+    <Import Project="\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\SharedProject\SharedProject.projitems" Label="Shared"/>
 </Project>
