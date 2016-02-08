@@ -27,8 +27,11 @@ import Sugar
 		api.getJsonObject(apiEndpoint, success: {
 			(result:CacheObject?) -> () in
 			
-			if let deserialized = result.value! {
-				print( deserialized );
+			if let obj = result { //unwrap CacheObject
+				if let deserialized = obj.value! { //unwrap props
+					print( deserialized );
+					print( obj.ToJson() );
+				}
 			}
 			
 		}, error: errorDelegate);

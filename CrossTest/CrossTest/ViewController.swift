@@ -51,21 +51,65 @@ class ViewController: UIViewController {
     /**
      * Test HTTP Call, Response handling with a Promise
      */
-    func httpCallTest(api:SharedClassTest) -> () {
+    func GetJsonStringTest(api:SharedClassTest) -> () {
         let promise = Promise { (resolve: (AnyObject?) -> (), reject: (AnyObject?) -> ()) -> () in
             
             let apiEndpoint:String="https://api.spotify.com/v1/search?q=tania%20bowra&type=artist";
-            api.getJsonObject(apiEndpoint, success: { (response:String!) -> Void in
+            api.getJsonString(apiEndpoint, success: { (response:String!) -> Void in
                 resolve(response);
                 }, error: { (exception:NSException!) -> Void in
                     reject(exception);
             });
-            
         }
         promise.then { (value) -> () in
             // Probably doing something important with this data now
-            print("REQUEST SUCCESS");
+            print("Request succeeded");
             print( value )
+            }
+            .catch_ { (error) -> () in
+                // Display error message, log errors
+                print("Request failed");
+                print(error)
+            }
+            .finally { () -> () in
+                // Close connections, do cleanup
+                print("Cleaning up resources...");
+        }
+    }
+    
+    /**
+     * Test HTTP Call, Response handling with a Promise
+     */
+    func GetJsonObjectTest(api:SharedClassTest) -> () {
+        let promise = Promise { (resolve: (AnyObject?) -> (), reject: (AnyObject?) -> ()) -> () in
+            
+            let apiEndpoint:String="https://api.spotify.com/v1/search?q=tania%20bowra&type=artist";
+            
+            api.getJsonObject(apiEndpoint, success: { (response:CacheObject!) -> Void in
+                
+                
+                resolve( response );
+                
+                
+                }, error: { (exception:NSException!) -> Void in
+                    reject(exception);
+            });
+        }
+        promise.then { (value) -> () in
+            // Probably doing something important with this data now
+            print("Request succeeded");
+            
+            if let obj = value {
+                let result:CacheObject=obj as! CacheObject;
+                print( result )
+                print( result.timestamp )
+                print( result.value )
+                if let jsonString=result.ToJson() {
+                    print( jsonString )
+                }
+            }
+            
+            
             }
             .catch_ { (error) -> () in
                 // Display error message, log errors
@@ -74,6 +118,7 @@ class ViewController: UIViewController {
             }
             .finally { () -> () in
                 // Close connections, do cleanup
+                print("Cleaning up resources...");
         }
     }
     
@@ -82,7 +127,8 @@ class ViewController: UIViewController {
         let api:SharedClassTest = SharedClassTest();
         
         databaseTest(api);
-        httpCallTest(api);
+        GetJsonStringTest(api);
+        GetJsonObjectTest(api);
         
         let epoch:NSTimeInterval = NSDate().timeIntervalSince1970;
         print( epoch );

@@ -72,15 +72,21 @@ typedef enum Level: int64_t {
 @interface RemoteLogger: Logger
 @end
 
-@interface BaseObject: JsonObject
+@interface BaseObject: NSObject
 
 - (id)init;
+- (NSString *)ToJson;
+- (void)map:(NSString *)jsonString;
 
 @end
 
 @interface CacheObject: BaseObject
 
 - (id)initWithKey:(NSString *)key value:(NSString *)value timestamp:(NSString *)timestamp;
+
+@property (strong) NSString *key;
+@property (strong) NSString *value;
+@property (strong) NSString *timestamp;
 
 @end
 

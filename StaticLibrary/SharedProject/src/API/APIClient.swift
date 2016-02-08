@@ -68,19 +68,9 @@ class APIClient {
 				 
 				self.logger.debug( "CACHE OBJECT "  + cacheObject.timestamp );
 				  
-				let myObject:Sugar.Json.JsonObject = Sugar.Json.JsonObject.Load( jsonObject.ToString() );
-				if let obj = myObject {
-					let props = obj.Keys;
-					for el in props {
-						if let value = obj.Item[el] {
-							self.logger.debug( "\(el)=\(value.ToJson())" )
-						}
-					}
-					success( obj.ToJson() );
-				}
-				else {
-					success( jsonObject.ToJson() );
-				}
+				  
+				cacheObject.map(jsonObject.ToString() );
+				success( cacheObject.ToJson() );
 				
 			}
 			else {
@@ -111,7 +101,8 @@ class APIClient {
 					timestamp: Convert.ToString( unixMsec ) );
 				 
 				self.logger.debug( "CACHE OBJECT "  + cacheObject.timestamp );
-				  
+				
+				cacheObject.map(jsonObject.ToString() );
 				success( cacheObject );
 				
 			}
