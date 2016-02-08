@@ -76,6 +76,7 @@ typedef enum Level: int64_t {
 
 - (id)init;
 - (NSString *)ToJson;
+- (/* mapped */ NSMutableDictionary *)toJsonObject;
 - (void)map:(NSString *)jsonString;
 
 @end

@@ -100,12 +100,23 @@ class ViewController: UIViewController {
             print("Request succeeded");
             
             if let obj = value {
+                
                 let result:CacheObject=obj as! CacheObject;
+                
                 print( result )
                 print( result.timestamp )
                 print( result.value )
-                if let jsonString=result.ToJson() {
+                
+                if let jsonString=result.ToJson() { // json string
                     print( jsonString )
+                }
+                
+                if let jsonObject=result.toJsonObject() { // json object
+                    
+                    print("\(jsonObject)\n[artists]=\(jsonObject["artists"].dynamicType)");
+                    if let jsonValue=jsonObject["artists"] {
+                        print("[artists]][href]\(jsonValue["href"])");
+                    }
                 }
             }
             
@@ -133,6 +144,29 @@ class ViewController: UIViewController {
         let epoch:NSTimeInterval = NSDate().timeIntervalSince1970;
         print( epoch );
         
+        let jsonObject : [String:AnyObject] = [
+            "timestamp" : epoch,
+            "item" : [
+                "name" : "track"
+            ]
+        ];
+        
+        let valid = NSJSONSerialization.isValidJSONObject(jsonObject) // true
+
+        
+        print( "\(jsonObject)\nvalid:\(valid)" );
+        print("\(jsonObject["timestamp"]) - \(jsonObject["item"]!["name"])");
+        
+        do {
+            let data:NSData =  try NSJSONSerialization.dataWithJSONObject(jsonObject, options: NSJSONWritingOptions.PrettyPrinted);
+            print("\(data)");
+            
+            let jsonObj2:AnyObject = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments);
+            print("\(jsonObj2)");
+            
+        } catch _ {
+        
+        }
     }
     
     override func viewDidLoad() {
