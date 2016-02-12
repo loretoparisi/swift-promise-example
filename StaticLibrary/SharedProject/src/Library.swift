@@ -36,8 +36,12 @@ public class SharedClassTest {
 	* Public API
 	******************/
 	
+	/******************
+	* Database API
+	******************/
+	
 	/**
-	* Setup
+	* Database set up
 	*/
 	public func setup() -> () {
 		
@@ -54,28 +58,64 @@ public class SharedClassTest {
 	}
 	
 	/**
-	* Perform HTTP REST Call
-	*/
-	public func getJsonObject(var aUrl: String, success: (response:CacheObject?) ->(), error: (response:Exception?) ->()  )	 {
-		client.testGetJsonObject(aUrl, success: { (response:CacheObject!) -> () in
-				success( response )
-		},
-		error: { (response:Exception!) -> () in
-			error( response )
-		});
+	 * Add to database
+	 */
+	public func storageAdd(var object:CacheObject!) ->() {
+	
 	}
 	
 	/**
-	* Perform HTTP REST Call
-	*/
-	public func getJsonString(var aUrl: String, success: (response:String?) ->(), error: (response:Exception?) ->()  )	 {
-		client.testGetJsonString(aUrl, success: { (response:String!) -> () in
-				success( response )
-		},
-		error: { (response:Exception!) -> () in
-			error( response )
-		});
+	 * Flush the database
+	 */
+	public func storageFlush() ->() {
+	
 	}
+	
+	/******************
+	* HTTP Client API
+	******************/
+	
+	/**
+	* Perform HTTP GET REST Call
+	*/
+	public func getJsonObject(var aUrl: String,
+		success: (response:CacheObject?) ->(),
+		error: (response:Exception?) ->()  ) ->() {
+			client.testGetJsonObject(aUrl, success: { (response:CacheObject!) -> () in
+					success( response )
+			},
+			error: { (response:Exception!) -> () in
+				error( response )
+			});
+	} //getJsonObject
+	
+	/**
+	* Perform HTTP GET REST Call
+	*/
+	public func getJsonString(var aUrl: String,
+		success: (response:String?) ->(),
+		error: (response:Exception?) ->()  ) -> ()	 {
+			client.testGetJsonString(aUrl, success: { (response:String!) -> () in
+					success( response )
+			},
+			error: { (response:Exception!) -> () in
+				error( response )
+			});
+	} //getJsonString
+	
+	/**
+	* Perform HTTP POST REST Call
+	*/
+	public func postJsonString(var aUrl: String, let parameters: [String:String]!,
+		success: (response:String?) ->(),
+		error: (response:Exception?) ->()  ) -> () {
+			client.testPostJsonString(aUrl, parameters: parameters, success: { (response:String!) -> () in
+				success( response )
+			},
+			error: { (response:Exception!) -> () in
+				error( response )
+			});
+	} //postJsonString
 	
 	/***********************
 	* Platform-Dependent API

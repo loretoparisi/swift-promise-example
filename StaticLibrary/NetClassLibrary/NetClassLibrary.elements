@@ -14,6 +14,7 @@
         <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
         <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
         <MinFrameworkVersionRequired>4.0</MinFrameworkVersionRequired>
+        <CrossPlatform>True</CrossPlatform>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         <Optimize>false</Optimize>
@@ -32,6 +33,7 @@
         <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
         <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
         <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+        <CrossPlatform>True</CrossPlatform>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <Optimize>true</Optimize>
@@ -49,6 +51,7 @@
         <XmlDocWarningLevel>WarningOnPublicMembers</XmlDocWarningLevel>
         <EnableUnmanagedDebugging>False</EnableUnmanagedDebugging>
         <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+        <CrossPlatform>True</CrossPlatform>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="mscorlib"/>
@@ -70,12 +73,11 @@
         <Reference Include="RemObjects.Elements.Dynamic">
             <Private>True</Private>
         </Reference>
-        <Reference Include="Sugar.dll">
-            <Private>True</Private>
+        <Reference Include="Sugar">
+            <HintPath>mylibs\Sugar.dll</HintPath>
         </Reference>
         <Reference Include="Sugar.Data">
             <HintPath>mylibs\Sugar.Data.dll</HintPath>
-            <Private>True</Private>
         </Reference>
     </ItemGroup>
     <ItemGroup>
@@ -90,5 +92,5 @@
         <Compile Include="Properties\Settings.Designer.swift"/>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Oxygene/RemObjects.Oxygene.Echoes.targets"/>
-    <Import Project="\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\SharedProject\SharedProject.projitems" Label="Shared"/>
+    <Import Project="/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.projitems" Label="Shared"/>
 </Project>

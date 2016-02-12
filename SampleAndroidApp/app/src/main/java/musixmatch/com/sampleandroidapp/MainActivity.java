@@ -10,13 +10,21 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.os.AsyncTask;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 // Shared Library Test
 import com.remobjects.elements.system.Action1;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import samplelibrary.CacheObject;
 import samplelibrary.SharedClassTest;
 import samplelibrary.ConsoleLogger;
+import sugar.json.JsonNode;
+import sugar.json.JsonObject;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -104,7 +112,21 @@ public class MainActivity extends AppCompatActivity {
             Action1<CacheObject> success = new Action1<CacheObject>() {
                 @Override
                 public void run(CacheObject keyValuePairs) {
-                    Log.d("TEST", keyValuePairs.toString() );
+                    HashMap<String, Object> myObj = keyValuePairs.toJsonObject();
+
+                    Iterator iter = myObj.entrySet().iterator();
+                    while ( iter.hasNext() ) { // traverse items
+                        Map.Entry menEntry = (Map.Entry) iter.next();
+
+                        Log.d("TEST", "key:"+menEntry.getKey() +" value:"+menEntry.getValue() + "\nClass type:"
+                                +menEntry.getValue().getClass().getSimpleName());
+
+                        JsonObject jsonObject = (JsonObject) menEntry.getValue();
+                        JsonNode aNode=jsonObject.getItem("artists");
+                        Log.d("TEST", "[artists]"+aNode.ToJson());
+
+                    }
+
                 }
             };
             Action1<Exception> error = new Action1<Exception>() {

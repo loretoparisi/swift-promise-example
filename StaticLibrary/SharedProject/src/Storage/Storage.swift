@@ -26,21 +26,21 @@ public class Storage {
 		self.logger = logger;
 	}
 
-}
+} //Storage
 
 /**
 * In-memory Storage (Cache) Handlers
 */
 public class MemoryStorage : Storage {
 
-}
+} //MemoryStorage
 
 /**
 * Persistent Storage Handlers
 */
 public class PersistentStorage : Storage {
 
-}
+} //PersistentStorage
 
 /**
 * Database Persistent Storage
@@ -186,7 +186,49 @@ public class DatabaseStorage : PersistentStorage {
 		else {
 			logger.error("Database error",error:nil);
 		}
-	}
+	} //testDatabase
+	
+	/**
+	 * Test a insert of an object
+	 */
+	/**
+	* Test Object Insert
+	*/
+	private func testInsertObject(object:CacheObject!) -> Bool {
+		if let dbConn = self.conn {
+			return true;
+		}
+		else {
+			logger.error("testInsertObject error",error:nil);
+			return false;
+		}
+	} //testInsertObject
+	
+	/**
+	 * Test remove of an object
+	 */
+	private func testRemoveObject(let object:CacheObject!) -> Bool {
+		if let dbConn = self.conn {
+			return true;
+		}
+		else {
+			logger.error("testRemoveObject error",error:nil);
+			return false;
+		}
+	} //testInsertObject
+	
+	/**
+	 * Test Select objects
+	 */
+	private func testSelectObjects() -> CacheObject[]? {
+		if let dbConn = self.conn {
+			return nil;
+		}
+		else {
+			logger.error("testSelectObjects error",error:nil);
+			return nil;
+		}
+	} //testSelectObjects
 	
 	/**
 	* Test a Insert statement
@@ -195,16 +237,16 @@ public class DatabaseStorage : PersistentStorage {
 		do {
 				
 			let rndIndex=(Sugar.Random()).NextInt();
-			let key="USER_"+Sugar.Convert.ToString(rndIndex);
+			let key="USER_"+Sugar.Convert.ToString(rndIndex,10);
 				
 			let INSERT = "INSERT OR REPLACE INTO CACHE (cache_key, cache_value, timestamp) VALUES (?,?,?);";
 			try executeInsert(conn, query:INSERT , parameters:[key,"PIPPO","20150101"]);
 			
 		} catch let error as SQLiteException {
-			logger.error("sql insert error",error:error);
+			logger.error("testInsert sql error",error:error);
 			return false;
 		} catch let error as SugarException {
-			logger.error("sql insert error",error:error);
+			logger.error("testInsert error",error:error);
 			return false;
 		}
 		return true;
@@ -213,7 +255,7 @@ public class DatabaseStorage : PersistentStorage {
 	/**
 	* Test a Select statement
 	*/
-	private func testSelect(conn:SQLiteConnection!) -> Bool {
+	private func testSelect(conn:SQLiteConnection!) -> SQLiteQueryResult? {
 		do {
 				
 			let SELECT = "SELECT CACHE.cache_key, CACHE.cache_value, CACHE.timestamp from CACHE"
@@ -226,26 +268,36 @@ public class DatabaseStorage : PersistentStorage {
 				logger.debug( result.GetString( ++i ) ); // col3
 			}
 			
+			return result;
+			
 		} catch let error as SQLiteException {
-			logger.error("sql error",error:error);
-			return false;
+			logger.error("testSelect sql error",error:error);
+			return nil;
+		} catch let error as SugarException {
+			logger.error("testSelect error",error:error);
+			return nil;
 		}
-		return true;
 	} //testSelect
 	
 	/**
-	* Test Object Insert
+	* Test delete statement
 	*/
-	private func testInsertObject(object:BaseObject!) -> Bool {
-		if let dbConn = self.conn {
-			return true;
-		}
-		else {
-			logger.error("Database error",error:nil);
+	private func testDelete(let key:String, conn:SQLiteConnection!) -> Bool {
+		do {
+				
+			let STMT = "DELETE FROM CACHE where cache_key=?;";
+			try execute(conn, query:STMT , parameters:[key]);
+			
+		} catch let error as SQLiteException {
+			logger.error("testDelete sql error",error:error);
+			return false;
+		} catch let error as SugarException {
+			logger.error("testDelete error",error:error);
 			return false;
 		}
-	}
+		return true;
+	} //testDelete
 	
-}
+} //DatabaseStorage
 
 

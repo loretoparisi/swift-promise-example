@@ -31,8 +31,11 @@ typedef enum Level: int64_t {
 
 - (id)init;
 - (void)setup;
+- (void)storageAdd:(CacheObject *)object;
+- (void)storageFlush;
 - (void)getJsonObject:(_Nonnull /* mapped */ NSString *)aUrl success:(_Nonnull void (^)(CacheObject * ))success error:(_Nonnull void (^)(NSException * ))error;
 - (void)getJsonString:(_Nonnull /* mapped */ NSString *)aUrl success:(_Nonnull void (^)(/* mapped */ NSString * ))success error:(_Nonnull void (^)(NSException * ))error;
+- (void)postJsonString:(_Nonnull /* mapped */ NSString *)aUrl parameters:(/* mapped */ NSMutableDictionary *)parameters success:(_Nonnull void (^)(/* mapped */ NSString * ))success error:(_Nonnull void (^)(NSException * ))error;
 
 @end
 

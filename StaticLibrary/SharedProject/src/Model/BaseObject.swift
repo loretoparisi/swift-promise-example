@@ -14,6 +14,31 @@ public class BaseObject {
 	
 	private var rawObject:Sugar.Json.JsonObject?;
 	
+	/******************
+	 * Private API
+	******************/
+	
+	/**
+	 * Map JsonNode to KeyValuePair
+	 */
+	private func mapNodeToKV(node:Sugar.Json.JsonNode,json:[String:AnyObject],key:String!,pos:Int!) -> ([String:AnyObject]?) {
+		if node.Count>=1 {
+			for k in node.Keys {
+				json[key]=mapNodeToKV(node.Item[k]!,json:json,key:k,pos:pos+1)!;
+				writeLn("[KEY]:\n\(key):[VALUE]:\n\(json[key])");
+			}
+			return json;
+		}
+		else {
+			json[key]=node;
+			writeLn("[KEY]:\n\(key):[VALUE]:\n\(json[key])");
+			return json;
+		}
+	}
+	
+	/******************
+	 * Public API
+	******************/
 	public init() {
 		super.init();
 	}
@@ -30,16 +55,15 @@ public class BaseObject {
 	
 	/**
 	 * Get Json Object
+	 * @TODO: recursive mapping
 	 */
 	public func toJsonObject() -> ([String:AnyObject]?) {
-		var json:[String:AnyObject] = [String:AnyObject]();
-		if let obj = self.rawObject {
-			let allKeys = obj.Keys;
-			for key in allKeys {
-				if let value = obj.Item[key] {
-					json[key]=value;
-				}
-			}
+		var json:[String:AnyObject]! = [String:AnyObject]();
+		if let node = self.rawObject {
+			json=mapNodeToKV(node,json:json,key:"root",pos:0);
+			/*for k in node.Keys {
+				json[k]=node.Item[k]!
+			}*/
 			return json;
 		}
 		return nil;

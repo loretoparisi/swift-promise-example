@@ -21,7 +21,7 @@ import Sugar
 				print(error);
 		};
 		
-		let apiEndpoint:String="https://api.spotify.com/v1/search?q=tania%20bowra&type=artist";
+		var apiEndpoint:String="https://api.spotify.com/v1/search?q=tania%20bowra&type=artist";
 		api.getJsonString(apiEndpoint, success: successDelegate, error: errorDelegate);
 		
 		api.getJsonObject(apiEndpoint, success: {
@@ -32,6 +32,34 @@ import Sugar
 					print( deserialized );
 					print( obj.ToJson() );
 				}
+				
+				// Following code not working yet
+				/*
+				if let jsonObject=obj.toJsonObject() { // json object
+					
+					print("\(jsonObject)\n[artists]=\(jsonObject["artists"])");
+					if let jsonValue=jsonObject["artists"] {
+						print("[artists]][href]\(jsonValue["href"])");
+					}
+				}*/
+			}
+			
+		}, error: errorDelegate);
+		
+		api.getJsonString(apiEndpoint, success: successDelegate, error: errorDelegate);
+		
+		apiEndpoint="https://posttestserver.com/post.php?dir=swift-promise";
+		let epoch:NSTimeInterval = NSDate().timeIntervalSince1970;
+		let epochInt64 = Int64(epoch)
+		var dict: Dictionary<String, String> = [
+			"key" : "value"
+			,"timestamp" : Convert.ToString(epochInt64)
+		];
+		api.postJsonString(apiEndpoint, parameters:dict, success: {
+			(result:String?) -> () in
+			
+			if let obj = result { //unwrap CacheObject
+				print( obj );
 			}
 			
 		}, error: errorDelegate);
