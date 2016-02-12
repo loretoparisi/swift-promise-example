@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             };
-            sampleAPI.getJsonObject__success__error(apiURL, success,error);
+            sampleAPI.getJsonObject__success__error(apiURL, success, error);
 
             sampleAPI.getJsonString__success__error(apiURL, new Action1<String>() {
                         @Override
@@ -147,6 +147,27 @@ public class MainActivity extends AppCompatActivity {
                     new Action1<Exception>() {
                         @Override
                         public void run(Exception e) {
+                            Log.d("TEST", e.toString());
+                        }
+                    });
+
+            apiURL = "https://posttestserver.com/post.php?dir=swift-promise";
+
+            HashMap<String, String> postParams = new HashMap<String, String>();
+            postParams.put("title","Innuendo");
+            postParams.put("artist","Queen");
+            sampleAPI.postJsonString__parameters__success__error(apiURL, postParams, new Action1<String>() {
+                        @Override
+                        public void run(String s) {
+                            Log.d("TEST", "postJsonString DONE.");
+                            Log.d("TEST", s);
+                        }
+                    },
+
+                    new Action1<Exception>() {
+                        @Override
+                        public void run(Exception e) {
+                            Log.d("TEST", "postJsonString FAILED.");
                             Log.d("TEST", e.toString());
                         }
                     });

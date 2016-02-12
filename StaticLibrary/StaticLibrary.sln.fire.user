@@ -56,6 +56,8 @@
 	<true/>
 	<key>FolderExpanded_SharedProject_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/src/Storage/</key>
 	<true/>
+	<key>FolderExpanded_SharedProject_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/src/Utils/</key>
+	<true/>
 	<key>FolderExpanded_StaticLibrary_/Users/admin/Documents/StaticLibrary/StaticLibrary.elements---References</key>
 	<true/>
 	<key>FolderExpanded_StaticLibrary_file:///Users/admin/Documents/StaticLibrary/StaticLibrary.elements_file:///Users/admin/Documents/StaticLibrary/</key>
@@ -423,13 +425,13 @@
 		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleiOSApp/SampleiOSApp.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleiOSApp/FirstViewController.swift</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>35</integer>
+			<integer>27</integer>
 			<key>CursorY</key>
-			<integer>48</integer>
+			<integer>54</integer>
 			<key>ScrollX</key>
 			<real>0.0</real>
 			<key>ScrollY</key>
-			<real>36</real>
+			<real>600</real>
 			<key>SelectionCursorUndecided</key>
 			<false/>
 			<key>SelectionEndColumn</key>
@@ -998,25 +1000,25 @@
 		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/src/API/APIClient.swift</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>19</integer>
+			<integer>31</integer>
 			<key>CursorY</key>
-			<integer>83</integer>
+			<integer>127</integer>
 			<key>ScrollX</key>
 			<real>0.0</real>
 			<key>ScrollY</key>
-			<real>1102</real>
+			<real>1549</real>
 			<key>SelectionCursorUndecided</key>
 			<true/>
 			<key>SelectionEndColumn</key>
-			<integer>34</integer>
+			<integer>61</integer>
 			<key>SelectionEndLine</key>
-			<integer>83</integer>
+			<integer>127</integer>
 			<key>SelectionIsLinear</key>
 			<true/>
 			<key>SelectionStartColumn</key>
-			<integer>16</integer>
+			<integer>31</integer>
 			<key>SelectionStartLine</key>
-			<integer>83</integer>
+			<integer>127</integer>
 		</dict>
 		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/src/Library.swift</key>
 		<dict>
@@ -1090,13 +1092,13 @@
 		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/src/Storage/Storage.swift</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>14</integer>
+			<integer>48</integer>
 			<key>CursorY</key>
-			<integer>226</integer>
+			<integer>185</integer>
 			<key>ScrollX</key>
 			<real>0.0</real>
 			<key>ScrollY</key>
-			<real>3160</real>
+			<real>2755</real>
 			<key>SelectionCursorUndecided</key>
 			<false/>
 			<key>SelectionEndColumn</key>
@@ -1113,13 +1115,13 @@
 		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/src/Utils/Logger.swift</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>26</integer>
+			<integer>37</integer>
 			<key>CursorY</key>
-			<integer>22</integer>
+			<integer>63</integer>
 			<key>ScrollX</key>
 			<real>0.0</real>
 			<key>ScrollY</key>
-			<real>0.0</real>
+			<real>927</real>
 			<key>SelectionCursorUndecided</key>
 			<false/>
 			<key>SelectionEndColumn</key>

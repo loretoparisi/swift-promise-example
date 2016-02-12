@@ -5,6 +5,8 @@
 * @2015-2016 Loreto Parisi
 */
 
+import Sugar
+
 /**
 * Base Logger 
 */
@@ -17,6 +19,15 @@ public class Logger {
 		case WARN = 2
 		case INFO = 3
 		case DEBUG = 4
+	}
+	
+	// Log Tags
+	public enum Tag: String {
+		case QUIET = "QUIET"
+		case ERROR = "ERROR"
+		case WARN = "WARN"
+		case INFO = "INFO"
+		case DEBUG = "DEBUG"
 	}
 	
 	// Log Level
@@ -33,12 +44,19 @@ public class Logger {
 	}
 	
 	/**
+	* Helper fun to log warning messages
+	*/
+	func warn(var message:String) ->() {
+	
+	}
+	
+	/**
 	* Helper fun to log debug messages
 	*/
 	func debug(var message:String) ->() {
 	}
 
-}
+} //Logger
 
 /**
 * Console Logger 
@@ -46,36 +64,61 @@ public class Logger {
 public class ConsoleLogger : Logger {
 	
 	/**
+	 * Log messages to console
+	 */
+	private func log(let tag:String, var message:String) -> () {
+		
+		let now = DateTime.UtcNow;
+		let msg= "[\(now)] \(tag):\(message)";
+		//@TODO: format msg
+		writeLn(msg);
+	}
+	
+	/**
+	 * Dump error
+	 */
+	private func dump(var error:Object?) -> () {
+		if let error = error {
+			writeLn(error);
+		}
+	}
+	
+	/**
+	* Helper fun to log debug messages
+	*/
+	override func warn(var message:String) ->() {
+		self.log(Tag.WARN,message:message);
+	}
+	
+	/**
 	* Helper fun to log debug messages
 	*/
 	override func debug(var message:String) ->() {
-		writeLn(message);
+		self.log(Tag.DEBUG,message:message);
 	}
 	
 	/**
 	* Helper fun to log errors exceptions by platform type
 	*/
 	override func error(var message:String, var error:Object?) ->() {
-		writeLn(message);
-		if let error = error {
-			writeLn(error);
-		}
+		self.log(Tag.ERROR,message:message);
+		self.dump(error);
 	}
-}
+} //ConsoleLogger
 
 /**
 * File Logger 
 */
 public class FileLogger : Logger {
 
-}
+} //FileLogger
 
 /**
 * Remote Socket Logger 
 */
 public class RemoteLogger : Logger {
 
-}
+} //RemoteLogger
 
 
 

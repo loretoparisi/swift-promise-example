@@ -179,9 +179,21 @@ public class DatabaseStorage : PersistentStorage {
 	*/
 	public func testDatabase() -> () {
 		if let dbConn = self.conn {
+			
 			testSelect(dbConn);
 			testInsert(dbConn);
-			testSelect(dbConn);
+			
+			if let result = testSelect(dbConn) {
+				while result.MoveNext() {
+					var i=0;
+					logger.debug( result.GetString( i ) ); // col1
+					logger.debug( result.GetString( ++i ) ); // col2
+					logger.debug( result.GetString( ++i ) ); // col3
+				}
+			} else {
+				logger.warn("Select no results");
+			}
+		
 		}
 		else {
 			logger.error("Database error",error:nil);
@@ -259,15 +271,7 @@ public class DatabaseStorage : PersistentStorage {
 		do {
 				
 			let SELECT = "SELECT CACHE.cache_key, CACHE.cache_value, CACHE.timestamp from CACHE"
-			let result:SQLiteQueryResult= try executeQuery(conn, query:SELECT , parameters:[]);
-			
-			while result.MoveNext() {
-				var i=0;
-				logger.debug( result.GetString( i ) ); // col1
-				logger.debug( result.GetString( ++i ) ); // col2
-				logger.debug( result.GetString( ++i ) ); // col3
-			}
-			
+			let result:SQLiteQueryResult = try executeQuery(conn, query:SELECT , parameters:[]);
 			return result;
 			
 		} catch let error as SQLiteException {
