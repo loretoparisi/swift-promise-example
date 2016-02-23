@@ -13,6 +13,8 @@ import Sugar.Cryptography;
 */
 class APIClient {
 	
+	__event Callback: ((Int) -> ())!
+	
 	// Console Logger
 	var logger:Logger;
 	

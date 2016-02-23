@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		841BDDA31C6A4173008921CF /* libStaticLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 841BDDA11C6A4173008921CF /* libStaticLibrary.a */; };
+		842730BB1C7C9AD200ECB8C0 /* libNougat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 842730B51C7C9AD200ECB8C0 /* libNougat.a */; };
+		842730BC1C7C9AD200ECB8C0 /* libSugar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 842730B61C7C9AD200ECB8C0 /* libSugar.a */; };
+		842730BD1C7C9AD200ECB8C0 /* libSugar.Data.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 842730B71C7C9AD200ECB8C0 /* libSugar.Data.a */; };
+		842730C01C7C9AD200ECB8C0 /* libSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 842730BA1C7C9AD200ECB8C0 /* libSwift.a */; };
 		842AD7D01C21B97600FFB227 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AD7CF1C21B97600FFB227 /* Promise.swift */; };
 		848C263B1C1B4C8A006BAC15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C263A1C1B4C8A006BAC15 /* AppDelegate.swift */; };
 		848C263D1C1B4C8A006BAC15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C263C1C1B4C8A006BAC15 /* ViewController.swift */; };
@@ -18,10 +22,6 @@
 		84A47CF91C451B8B009C8F9A /* OBJCObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A47CF71C451B8B009C8F9A /* OBJCObjectFactory.m */; };
 		84A47CFA1C451B8B009C8F9A /* ObjectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A47CF81C451B8B009C8F9A /* ObjectFactory.swift */; };
 		84A47D081C454B79009C8F9A /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 848C26571C1B54EF006BAC15 /* libxml2.tbd */; };
-		84A47D161C46F198009C8F9A /* libNougat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A47D111C46F198009C8F9A /* libNougat.a */; };
-		84A47D171C46F198009C8F9A /* libSugar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A47D121C46F198009C8F9A /* libSugar.a */; };
-		84A47D181C46F198009C8F9A /* libSugar.Data.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A47D131C46F198009C8F9A /* libSugar.Data.a */; };
-		84A47D191C46F198009C8F9A /* libSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A47D141C46F198009C8F9A /* libSwift.a */; };
 		84AEF8011C6CC9C7000A589E /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AEF8001C6CC9C7000A589E /* LinkedList.swift */; };
 		84AEF8031C6CCAF8000A589E /* Hailstone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AEF8021C6CCAF8000A589E /* Hailstone.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +29,10 @@
 /* Begin PBXFileReference section */
 		841BDDA11C6A4173008921CF /* libStaticLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libStaticLibrary.a; sourceTree = "<group>"; };
 		841BDDA21C6A4173008921CF /* StaticLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticLibrary.h; sourceTree = "<group>"; };
+		842730B51C7C9AD200ECB8C0 /* libNougat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNougat.a; sourceTree = "<group>"; };
+		842730B61C7C9AD200ECB8C0 /* libSugar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSugar.a; sourceTree = "<group>"; };
+		842730B71C7C9AD200ECB8C0 /* libSugar.Data.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSugar.Data.a; sourceTree = "<group>"; };
+		842730BA1C7C9AD200ECB8C0 /* libSwift.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSwift.a; sourceTree = "<group>"; };
 		842AD7CF1C21B97600FFB227 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 		848C26371C1B4C8A006BAC15 /* CrossTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848C263A1C1B4C8A006BAC15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,10 +47,6 @@
 		84A47CF61C451B8B009C8F9A /* OBJCObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBJCObjectFactory.h; sourceTree = "<group>"; };
 		84A47CF71C451B8B009C8F9A /* OBJCObjectFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBJCObjectFactory.m; sourceTree = "<group>"; };
 		84A47CF81C451B8B009C8F9A /* ObjectFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectFactory.swift; sourceTree = "<group>"; };
-		84A47D111C46F198009C8F9A /* libNougat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNougat.a; sourceTree = "<group>"; };
-		84A47D121C46F198009C8F9A /* libSugar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSugar.a; sourceTree = "<group>"; };
-		84A47D131C46F198009C8F9A /* libSugar.Data.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSugar.Data.a; sourceTree = "<group>"; };
-		84A47D141C46F198009C8F9A /* libSwift.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSwift.a; sourceTree = "<group>"; };
 		84AEF8001C6CC9C7000A589E /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		84AEF8021C6CCAF8000A589E /* Hailstone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hailstone.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,25 +57,47 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A47D081C454B79009C8F9A /* libxml2.tbd in Frameworks */,
+				842730C01C7C9AD200ECB8C0 /* libSwift.a in Frameworks */,
+				842730BC1C7C9AD200ECB8C0 /* libSugar.a in Frameworks */,
 				841BDDA31C6A4173008921CF /* libStaticLibrary.a in Frameworks */,
-				84A47D191C46F198009C8F9A /* libSwift.a in Frameworks */,
-				84A47D171C46F198009C8F9A /* libSugar.a in Frameworks */,
 				84A47CEF1C440972009C8F9A /* libsqlite3.tbd in Frameworks */,
-				84A47D161C46F198009C8F9A /* libNougat.a in Frameworks */,
-				84A47D181C46F198009C8F9A /* libSugar.Data.a in Frameworks */,
+				842730BB1C7C9AD200ECB8C0 /* libNougat.a in Frameworks */,
+				842730BD1C7C9AD200ECB8C0 /* libSugar.Data.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		842AD7D31C21B9D200FFB227 /* StaticLibs */ = {
+		842730B31C7C9A7C00ECB8C0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				842AD7CF1C21B97600FFB227 /* Promise.swift */,
+				84AEF8001C6CC9C7000A589E /* LinkedList.swift */,
+				84AEF8021C6CCAF8000A589E /* Hailstone.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		842730B41C7C9AD200ECB8C0 /* SilverLibs */ = {
+			isa = PBXGroup;
+			children = (
+				842730B51C7C9AD200ECB8C0 /* libNougat.a */,
+				842730B61C7C9AD200ECB8C0 /* libSugar.a */,
+				842730B71C7C9AD200ECB8C0 /* libSugar.Data.a */,
+				842730BA1C7C9AD200ECB8C0 /* libSwift.a */,
+			);
+			name = SilverLibs;
+			path = "../silver-packages/ios";
+			sourceTree = "<group>";
+		};
+		842AD7D31C21B9D200FFB227 /* CocoaLibs */ = {
 			isa = PBXGroup;
 			children = (
 				84A47CEE1C440972009C8F9A /* libsqlite3.tbd */,
 				848C26571C1B54EF006BAC15 /* libxml2.tbd */,
 			);
-			name = StaticLibs;
+			name = CocoaLibs;
 			sourceTree = "<group>";
 		};
 		842AD7D41C21B9E400FFB227 /* Controller */ = {
@@ -108,7 +130,8 @@
 		848C262E1C1B4C8A006BAC15 = {
 			isa = PBXGroup;
 			children = (
-				842AD7D31C21B9D200FFB227 /* StaticLibs */,
+				842730B41C7C9AD200ECB8C0 /* SilverLibs */,
+				842AD7D31C21B9D200FFB227 /* CocoaLibs */,
 				848C26391C1B4C8A006BAC15 /* CrossTest */,
 				848C26381C1B4C8A006BAC15 /* Products */,
 			);
@@ -126,11 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				84A47CED1C44094F009C8F9A /* Headers */,
-				84A47D101C46F198009C8F9A /* Sugar */,
-				84A47D091C45735A009C8F9A /* StaticLibrary */,
 				84A47CEC1C440945009C8F9A /* Sources */,
-				84A47CF51C451B8B009C8F9A /* SwiftFactory */,
-				842AD7D41C21B9E400FFB227 /* Controller */,
+				84A47D091C45735A009C8F9A /* StaticLibrary */,
 				842AD7D51C21B9EC00FFB227 /* Storyboard */,
 				842AD7D61C21B9F800FFB227 /* Resources */,
 			);
@@ -140,9 +160,9 @@
 		84A47CEC1C440945009C8F9A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				842AD7CF1C21B97600FFB227 /* Promise.swift */,
-				84AEF8001C6CC9C7000A589E /* LinkedList.swift */,
-				84AEF8021C6CCAF8000A589E /* Hailstone.swift */,
+				84A47CF51C451B8B009C8F9A /* SwiftFactory */,
+				842AD7D41C21B9E400FFB227 /* Controller */,
+				842730B31C7C9A7C00ECB8C0 /* Classes */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -172,25 +192,6 @@
 				841BDDA21C6A4173008921CF /* StaticLibrary.h */,
 			);
 			path = StaticLibrary;
-			sourceTree = "<group>";
-		};
-		84A47D101C46F198009C8F9A /* Sugar */ = {
-			isa = PBXGroup;
-			children = (
-				84A47D1B1C46F1A9009C8F9A /* StaticLibs */,
-			);
-			path = Sugar;
-			sourceTree = "<group>";
-		};
-		84A47D1B1C46F1A9009C8F9A /* StaticLibs */ = {
-			isa = PBXGroup;
-			children = (
-				84A47D111C46F198009C8F9A /* libNougat.a */,
-				84A47D121C46F198009C8F9A /* libSugar.a */,
-				84A47D131C46F198009C8F9A /* libSugar.Data.a */,
-				84A47D141C46F198009C8F9A /* libSwift.a */,
-			);
-			name = StaticLibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,9 +390,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CrossTest",
-					"$(PROJECT_DIR)/CrossTest/PortabileLibrary",
 					"$(PROJECT_DIR)/CrossTest/StaticLibrary",
-					"$(PROJECT_DIR)/CrossTest/Sugar",
+					"../silver-packages/ios",
+					"$(PROJECT_DIR)/CrossTest/ios",
 				);
 				New_Setting = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.musixmatch.CrossTest;
@@ -413,9 +414,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CrossTest",
-					"$(PROJECT_DIR)/CrossTest/PortabileLibrary",
 					"$(PROJECT_DIR)/CrossTest/StaticLibrary",
-					"$(PROJECT_DIR)/CrossTest/Sugar",
+					"../silver-packages/ios",
+					"$(PROJECT_DIR)/CrossTest/ios",
 				);
 				New_Setting = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.musixmatch.CrossTest;

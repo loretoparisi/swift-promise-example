@@ -9,6 +9,9 @@
 import Foundation;
 #endif
 
+/**
+ * Promise
+ */
 public class Promise {
 	
 	enum Status: Int {
@@ -47,7 +50,7 @@ public class Promise {
 	convenience init(closure: promiseClosure ) {
 		self.init()
 		let deferred = Deferred(promise: self)
-		closure( resolve: deferred.resolve, reject: deferred.reject )
+		promiseClosure( resolve: deferred.resolve, reject: deferred.reject )
 	}
 	
 	/*class func all(promises: Array<Promise>) -> Promise {
@@ -175,6 +178,9 @@ public class Promise {
 	
 }
 
+/**
+ * Deferred Promise
+ */
 public class Deferred: Promise {
 	
 	var promise:Promise
@@ -209,6 +215,9 @@ public class Deferred: Promise {
 	
 }
 
+/**
+ * Promise All
+ */
 public class All: Promise {
 	
 	var promises = Array<Promise>()
