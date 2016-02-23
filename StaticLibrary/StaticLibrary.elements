@@ -37,19 +37,19 @@
         <CrossPlatform>True</CrossPlatform>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="CoreGraphics.fx"/>
-        <Reference Include="Foundation.fx"/>
-        <Reference Include="UIKit.fx"/>
-        <Reference Include="rtl.fx"/>
-        <Reference Include="libNougat.fx"/>
-        <Reference Include="libSwift.fx"/>
+        <Reference Include="CoreGraphics"/>
+        <Reference Include="Foundation"/>
+        <Reference Include="UIKit"/>
+        <Reference Include="rtl"/>
+        <Reference Include="libNougat"/>
+        <Reference Include="libSwift"/>
         <Reference Include="libSugar.Data">
             <HintPath>mylibs\libSugar.Data.fx</HintPath>
         </Reference>
         <Reference Include="libSugar">
             <HintPath>mylibs\libSugar.fx</HintPath>
         </Reference>
-        <Reference Include="libsqlite3.fx"/>
+        <Reference Include="libsqlite3"/>
     </ItemGroup>
     <ItemGroup/>
     <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Oxygene/RemObjects.Oxygene.Nougat.targets"/>

@@ -58,14 +58,15 @@ public class BaseObject {
 	 * @TODO: recursive mapping
 	 */
 	public func toJsonObject() -> ([String:AnyObject]?) {
-		var json:[String:AnyObject]! = [String:AnyObject]();
+		var json = [String:AnyObject]();
+		/*if let node = self.rawObject {
 		if let node = self.rawObject {
 			json=mapNodeToKV(node,json:json,key:"root",pos:0);
 			/*for k in node.Keys {
 				json[k]=node.Item[k]!
 			}*/
 			return json;
-		}
+		}*/
 		return nil;
 	}
 	

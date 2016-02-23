@@ -70,14 +70,16 @@
         <Reference Include="Swift">
             <Private>True</Private>
         </Reference>
-        <Reference Include="RemObjects.Elements.Dynamic">
+        <Reference Include="Echoes">
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Sugar.Data">
+            <HintPath>mylibs\Sugar.Data.dll</HintPath>
             <Private>True</Private>
         </Reference>
         <Reference Include="Sugar">
             <HintPath>mylibs\Sugar.dll</HintPath>
-        </Reference>
-        <Reference Include="Sugar.Data">
-            <HintPath>mylibs\Sugar.Data.dll</HintPath>
+            <Private>True</Private>
         </Reference>
     </ItemGroup>
     <ItemGroup>

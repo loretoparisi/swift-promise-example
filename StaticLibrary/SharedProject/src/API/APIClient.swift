@@ -86,8 +86,13 @@ class APIClient {
 		success: (response:String?) ->(),
 		error: (response:Exception?) ->()) ->() {
 			
-			let body = "name=test&value=pippo"//yourJson.ToString()
+			var body=""
+			for (key,value) in parameters {
+				body += "&"+key+"="+value
+			}
+			
 			let request = HttpRequest( Url(url) );
+			
 			request.Mode=HttpRequestMode.Post;
 			request.FollowRedirects = true;
 			request.Headers["User-Agent"]="switft-example";

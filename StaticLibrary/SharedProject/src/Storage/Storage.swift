@@ -100,8 +100,8 @@ public class DatabaseStorage : PersistentStorage {
 		
 		// file system folder path
 		let Separator:Char=Sugar.IO.Folder.Separator;
-		let userLocal:Folder=Sugar.IO.Folder.UserLocal();
-		let userLocalPath:String=userLocal.Path;
+		let userLocal:Folder=Sugar.IO.Folder.UserHomeFolder();
+		let userLocalPath:String=userLocal.FullPath;
 		let dbPath:String = Sugar.IO.Path.Combine(userLocalPath,"db")
 		let dbFilePath:String = Sugar.IO.Path.Combine(dbPath,DBNAME)
 		
@@ -182,14 +182,15 @@ public class DatabaseStorage : PersistentStorage {
 			
 			testSelect(dbConn);
 			testInsert(dbConn);
-			
-			if let result = testSelect(dbConn) {
-				while result.MoveNext() {
+			 
+			let res:SQLiteQueryResult=testSelect(dbConn)!;
+			if let result = res {
+				/*while result.MoveNext(result) {
 					var i=0;
 					logger.debug( result.GetString( i ) ); // col1
 					logger.debug( result.GetString( ++i ) ); // col2
 					logger.debug( result.GetString( ++i ) ); // col3
-				}
+				}*/
 			} else {
 				logger.warn("Select no results");
 			}

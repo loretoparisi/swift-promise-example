@@ -53,7 +53,7 @@
         <AndroidPlatformName>android-23</AndroidPlatformName>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="android.jar"/>
+        <Reference Include="android"/>
         <Reference Include="sugar.data">
             <HintPath>mylibs\sugar.data.jar</HintPath>
             <Private>True</Private>
@@ -66,7 +66,7 @@
             <HintPath>mylibs\swift.jar</HintPath>
             <Private>True</Private>
         </Reference>
-        <Reference Include="com.remobjects.elements.rtl">
+        <Reference Include="cooper">
             <HintPath>mylibs\com.remobjects.elements.rtl.jar</HintPath>
             <Private>True</Private>
         </Reference>

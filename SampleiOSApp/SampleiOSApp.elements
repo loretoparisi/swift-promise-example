@@ -45,13 +45,13 @@
         <CrossPlatform>False</CrossPlatform>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="CoreGraphics.fx"/>
-        <Reference Include="Foundation.fx"/>
-        <Reference Include="UIKit.fx"/>
-        <Reference Include="rtl.fx"/>
-        <Reference Include="libNougat.fx"/>
-        <Reference Include="libSwift.fx"/>
-        <Reference Include="libsqlite3.fx"/>
+        <Reference Include="CoreGraphics"/>
+        <Reference Include="Foundation"/>
+        <Reference Include="UIKit"/>
+        <Reference Include="rtl"/>
+        <Reference Include="libNougat"/>
+        <Reference Include="libSwift"/>
+        <Reference Include="libsqlite3"/>
         <Reference Include="libSugar">
             <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\mylibs\libSugar.fx</HintPath>
         </Reference>

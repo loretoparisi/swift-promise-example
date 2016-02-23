@@ -76,8 +76,10 @@
         <AndroidManifest Include="Properties\AndroidManifest.android-xml"/>
     </ItemGroup>
     <ItemGroup>
-        <Reference Include="android.jar"/>
-        <Reference Include="swift.jar"/>
+        <Reference Include="android">
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="swift"/>
         <Reference Include="sugar.data">
             <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\ClassLibrary2\mylibs\sugar.data.jar</HintPath>
         </Reference>
