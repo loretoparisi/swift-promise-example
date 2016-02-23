@@ -43,13 +43,13 @@
         <Reference Include="rtl"/>
         <Reference Include="libNougat"/>
         <Reference Include="libSwift"/>
+        <Reference Include="libsqlite3"/>
         <Reference Include="libSugar.Data">
-            <HintPath>mylibs\libSugar.Data.fx</HintPath>
+            <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\silver-packages\ios\libSugar.Data.fx</HintPath>
         </Reference>
         <Reference Include="libSugar">
-            <HintPath>mylibs\libSugar.fx</HintPath>
+            <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\silver-packages\ios\libSugar.fx</HintPath>
         </Reference>
-        <Reference Include="libsqlite3"/>
     </ItemGroup>
     <ItemGroup/>
     <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Oxygene/RemObjects.Oxygene.Nougat.targets"/>

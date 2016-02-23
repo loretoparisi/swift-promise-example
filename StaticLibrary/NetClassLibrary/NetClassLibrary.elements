@@ -74,11 +74,11 @@
             <Private>True</Private>
         </Reference>
         <Reference Include="Sugar.Data">
-            <HintPath>mylibs\Sugar.Data.dll</HintPath>
+            <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\silver-packages\net\Sugar.Data.dll</HintPath>
             <Private>True</Private>
         </Reference>
         <Reference Include="Sugar">
-            <HintPath>mylibs\Sugar.dll</HintPath>
+            <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\silver-packages\net\Sugar.dll</HintPath>
             <Private>True</Private>
         </Reference>
     </ItemGroup>

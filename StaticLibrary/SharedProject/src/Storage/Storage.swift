@@ -182,15 +182,14 @@ public class DatabaseStorage : PersistentStorage {
 			
 			testSelect(dbConn);
 			testInsert(dbConn);
-			 
-			let res:SQLiteQueryResult=testSelect(dbConn)!;
-			if let result = res {
-				/*while result.MoveNext(result) {
+			
+			if let result = testSelect(dbConn) {
+				while result.MoveNext() {
 					var i=0;
 					logger.debug( result.GetString( i ) ); // col1
 					logger.debug( result.GetString( ++i ) ); // col2
 					logger.debug( result.GetString( ++i ) ); // col3
-				}*/
+				}
 			} else {
 				logger.warn("Select no results");
 			}

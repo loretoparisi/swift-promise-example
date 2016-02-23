@@ -112,7 +112,9 @@ public class MainActivity extends AppCompatActivity {
             Action1<CacheObject> success = new Action1<CacheObject>() {
                 @Override
                 public void run(CacheObject keyValuePairs) {
-                    HashMap<String, Object> myObj = keyValuePairs.toJsonObject();
+
+                    Log.d("TEST" , keyValuePairs.ToJson() );
+                    /*HashMap<String, Object> myObj = keyValuePairs.toJsonObject();
 
                     Iterator iter = myObj.entrySet().iterator();
                     while ( iter.hasNext() ) { // traverse items
@@ -125,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
                         JsonNode aNode=jsonObject.getItem("artists");
                         Log.d("TEST", "[artists]"+aNode.ToJson());
 
-                    }
+                    }*/
 
                 }
             };
@@ -156,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
             HashMap<String, String> postParams = new HashMap<String, String>();
             postParams.put("title","Innuendo");
             postParams.put("artist","Queen");
-            sampleAPI.postJsonString__parameters__success__error(apiURL, postParams, new Action1<String>() {
+            /*sampleAPI.postJsonString__parameters__success__error(apiURL, postParams, new Action1<String>() {
                         @Override
                         public void run(String s) {
                             Log.d("TEST", "postJsonString DONE.");
@@ -170,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
                             Log.d("TEST", "postJsonString FAILED.");
                             Log.d("TEST", e.toString());
                         }
-                    });
+                    });*/
 
             return null;
         }

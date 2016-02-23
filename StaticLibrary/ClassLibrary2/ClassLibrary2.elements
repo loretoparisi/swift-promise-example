@@ -54,20 +54,20 @@
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="android"/>
-        <Reference Include="sugar.data">
-            <HintPath>mylibs\sugar.data.jar</HintPath>
-            <Private>True</Private>
-        </Reference>
-        <Reference Include="sugar">
-            <HintPath>mylibs\sugar.jar</HintPath>
-            <Private>True</Private>
-        </Reference>
         <Reference Include="swift">
             <HintPath>mylibs\swift.jar</HintPath>
             <Private>True</Private>
         </Reference>
         <Reference Include="cooper">
             <HintPath>mylibs\com.remobjects.elements.rtl.jar</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="sugar.data">
+            <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\silver-packages\android\sugar.data.jar</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="sugar">
+            <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\silver-packages\android\sugar.jar</HintPath>
             <Private>True</Private>
         </Reference>
     </ItemGroup>

@@ -81,13 +81,14 @@
         </Reference>
         <Reference Include="swift"/>
         <Reference Include="sugar.data">
-            <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\ClassLibrary2\mylibs\sugar.data.jar</HintPath>
+            <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\silver-packages\android\sugar.data.jar</HintPath>
+            <Private>True</Private>
         </Reference>
         <Reference Include="sugar">
-            <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\ClassLibrary2\mylibs\sugar.jar</HintPath>
+            <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\silver-packages\android\sugar.jar</HintPath>
+            <Private>True</Private>
         </Reference>
         <Reference Include="Cooper">
-            <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\ClassLibrary2\mylibs\Cooper.jar</HintPath>
             <Private>True</Private>
         </Reference>
     </ItemGroup>
