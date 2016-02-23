@@ -78,7 +78,6 @@
             <Private>True</Private>
         </Reference>
         <Reference Include="Sugar">
-            <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\silver-packages\net\Sugar.dll</HintPath>
             <Private>True</Private>
         </Reference>
     </ItemGroup>

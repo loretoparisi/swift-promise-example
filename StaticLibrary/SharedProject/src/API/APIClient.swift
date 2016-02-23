@@ -129,7 +129,6 @@ class APIClient {
 				let key="USER_"+Convert.ToString(rndIndex,10);
 				let now = DateTime.UtcNow;
 				let unixMsec = (now.Ticks - DateTime.TicksSince1970 ) / TimeSpan.TicksPerSecond;
-				
 				var cacheObject:CacheObject = CacheObject(key:key,
 					value:jsonObject.ToString(),
 					timestamp: Convert.ToString(unixMsec, 10) );
@@ -162,7 +161,6 @@ class APIClient {
 				let key="USER_"+Sugar.Convert.ToString(rndIndex,10);
 				let now = DateTime.UtcNow
 				let unixMsec = (now.Ticks - DateTime.TicksSince1970 ) / TimeSpan.TicksPerSecond;
-				
 				var cacheObject:CacheObject = CacheObject(key:key,
 					value:jsonObject.ToString(),
 					timestamp: Convert.ToString( unixMsec, 10 ) );
