@@ -18,6 +18,8 @@
         <BundleIdentifier>org.me.sampleiosapp</BundleIdentifier>
         <CodesignCertificateName>iPhone Developer: Loreto Parisi (HFX54548Y7)</CodesignCertificateName>
         <CrossPlatform>False</CrossPlatform>
+        <ProvisioningProfileName>GenericDevelopmentProfile</ProvisioningProfileName>
+        <ProvisioningProfile>e4cdaaeb-27a9-460c-92cf-95f6776c245d</ProvisioningProfile>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         <Optimize>false</Optimize>
@@ -30,6 +32,8 @@
         <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
         <CodesignCertificateName>iPhone Developer: Loreto Parisi (HFX54548Y7)</CodesignCertificateName>
         <CrossPlatform>False</CrossPlatform>
+        <ProvisioningProfileName>GenericDevelopmentProfile</ProvisioningProfileName>
+        <ProvisioningProfile>e4cdaaeb-27a9-460c-92cf-95f6776c245d</ProvisioningProfile>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <Optimize>true</Optimize>
@@ -43,6 +47,8 @@
         <CreateIPA>True</CreateIPA>
         <CodesignCertificateName>iPhone Developer: Loreto Parisi (HFX54548Y7)</CodesignCertificateName>
         <CrossPlatform>False</CrossPlatform>
+        <ProvisioningProfileName>GenericDevelopmentProfile</ProvisioningProfileName>
+        <ProvisioningProfile>e4cdaaeb-27a9-460c-92cf-95f6776c245d</ProvisioningProfile>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="CoreGraphics"/>
@@ -58,6 +64,7 @@
         <Reference Include="libSugar">
             <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\silver-packages\ios\libSugar.fx</HintPath>
         </Reference>
+        <Reference Include="libxml2"/>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="AppDelegate.swift"/>
@@ -85,6 +92,6 @@
         <Storyboard Include="Resources\MainStoryboard~iPad.storyboard"/>
         <Storyboard Include="Resources\MainStoryboard~iPhone.storyboard"/>
     </ItemGroup>
-    <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Oxygene/RemObjects.Oxygene.Nougat.targets"/>
-    <Import Project="/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.projitems" Label="Shared"/>
+    <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Nougat.targets"/>
+    <Import Project="\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\SharedProject\SharedProject.projitems" Label="Shared"/>
 </Project>

@@ -95,6 +95,6 @@
     <ItemGroup>
         <Compile Include="MainActivity.swift"/>
     </ItemGroup>
-    <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Oxygene/RemObjects.Oxygene.Cooper.Android.targets"/>
-    <Import Project="/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.projitems" Label="Shared"/>
+    <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Cooper.Android.targets"/>
+    <Import Project="\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\StaticLibrary\SharedProject\SharedProject.projitems" Label="Shared"/>
 </Project>

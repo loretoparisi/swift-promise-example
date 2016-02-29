@@ -12,7 +12,7 @@ import Sugar.IO;
 /**
 * Storage Common Handlers
 */
-public class Storage {
+internal class Storage {
 	
 	// Console Logger
 	var logger:Logger;
@@ -31,21 +31,21 @@ public class Storage {
 /**
 * In-memory Storage (Cache) Handlers
 */
-public class MemoryStorage : Storage {
+internal class MemoryStorage : Storage {
 
 } //MemoryStorage
 
 /**
 * Persistent Storage Handlers
 */
-public class PersistentStorage : Storage {
+internal class PersistentStorage : Storage {
 
 } //PersistentStorage
 
 /**
 * Database Persistent Storage
 */
-public class DatabaseStorage : PersistentStorage {
+internal class DatabaseStorage : PersistentStorage {
 	
 	// Database name
 	let DBNAME:String = "db4.sq";

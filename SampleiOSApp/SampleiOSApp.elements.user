@@ -5,7 +5,7 @@
         <CrossBoxDevice>iPhone6Loreto</CrossBoxDevice>
         <CrossBoxDeviceID>d5a89e7ee3f07d9a69d1836fe8458680dc1f06c9</CrossBoxDeviceID>
         <CrossPlatform>False</CrossPlatform>
-        <ProvisioningProfile>243e96c0-69a8-42e9-831f-6192a0792b4e</ProvisioningProfile>
-        <ProvisioningProfileName>iOSTeam Provisioning Profile: * [67LHJQ26PL — musiXmatch srl]</ProvisioningProfileName>
+        <ProvisioningProfile>e4cdaaeb-27a9-460c-92cf-95f6776c245d</ProvisioningProfile>
+        <ProvisioningProfileName>GenericDevelopmentProfile</ProvisioningProfileName>
     </PropertyGroup>
 </Project>

@@ -8,24 +8,8 @@
 #import <Foundation/Foundation.h>
 
 @class SharedClassTest;
-@class Storage;
-@class MemoryStorage;
-@class PersistentStorage;
-@class DatabaseStorage;
-@class Logger;
-@class ConsoleLogger;
-@class FileLogger;
-@class RemoteLogger;
 @class BaseObject;
 @class CacheObject;
-
-typedef enum Level: int64_t {
-    Level_QUIET = 0,
-    Level_ERROR = 1,
-    Level_WARN = 2,
-    Level_INFO = 3,
-    Level_DEBUG = 4
-  } Level;
 
 @interface SharedClassTest: NSObject
 
@@ -37,42 +21,6 @@ typedef enum Level: int64_t {
 - (void)getJsonString:(_Nonnull /* mapped */ NSString *)aUrl success:(_Nonnull void (^)(/* mapped */ NSString * ))success error:(_Nonnull void (^)(NSException * ))error;
 - (void)postJsonString:(_Nonnull /* mapped */ NSString *)aUrl parameters:(/* mapped */ NSMutableDictionary *)parameters success:(_Nonnull void (^)(/* mapped */ NSString * ))success error:(_Nonnull void (^)(NSException * ))error;
 
-@end
-
-@interface Storage: NSObject
-
-- (id)init;
-- (id)initWithLogger:(_Nonnull Logger *)logger;
-
-@end
-
-@interface MemoryStorage: Storage
-@end
-
-@interface PersistentStorage: Storage
-@end
-
-@interface DatabaseStorage: PersistentStorage
-
-- (void)testDatabase;
-
-@end
-
-@interface Logger: NSObject
-
-- (id)initWithLevel:(_Nonnull Level)level;
-
-@end
-
-@interface ConsoleLogger: Logger
-
-
-@end
-
-@interface FileLogger: Logger
-@end
-
-@interface RemoteLogger: Logger
 @end
 
 @interface BaseObject: NSObject

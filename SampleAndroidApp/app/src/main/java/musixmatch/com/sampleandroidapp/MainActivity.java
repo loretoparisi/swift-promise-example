@@ -111,9 +111,11 @@ public class MainActivity extends AppCompatActivity {
 
             Action1<CacheObject> success = new Action1<CacheObject>() {
                 @Override
-                public void run(CacheObject keyValuePairs) {
+                public void run(CacheObject resultObject) {
 
-                    Log.d("TEST" , keyValuePairs.ToJson() );
+                    Log.d("TEST", "getJsonObject");
+                    /// /Log.d("TEST" , resultObject.gettimestamp() );
+
                     /*HashMap<String, Object> myObj = keyValuePairs.toJsonObject();
 
                     Iterator iter = myObj.entrySet().iterator();
@@ -134,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
             Action1<Exception> error = new Action1<Exception>() {
                 @Override
                 public void run(Exception e) {
-
+                    Log.e("TEST", "Error getJsonObject", e);
                 }
             };
             sampleAPI.getJsonObject__success__error(apiURL, success, error);
@@ -142,6 +144,7 @@ public class MainActivity extends AppCompatActivity {
             sampleAPI.getJsonString__success__error(apiURL, new Action1<String>() {
                         @Override
                         public void run(String s) {
+                            Log.d("TEST", "getJsonString");
                             Log.d("TEST", s);
                         }
                     },
@@ -149,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
                     new Action1<Exception>() {
                         @Override
                         public void run(Exception e) {
-                            Log.d("TEST", e.toString());
+                            Log.e("TEST", "Error getJsonString", e);
                         }
                     });
 

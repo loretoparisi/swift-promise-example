@@ -130,6 +130,7 @@
 		848C262E1C1B4C8A006BAC15 = {
 			isa = PBXGroup;
 			children = (
+				84A47D091C45735A009C8F9A /* SharedLibs */,
 				842730B41C7C9AD200ECB8C0 /* SilverLibs */,
 				842AD7D31C21B9D200FFB227 /* CocoaLibs */,
 				848C26391C1B4C8A006BAC15 /* CrossTest */,
@@ -148,9 +149,8 @@
 		848C26391C1B4C8A006BAC15 /* CrossTest */ = {
 			isa = PBXGroup;
 			children = (
-				84A47CED1C44094F009C8F9A /* Headers */,
+				84A47CED1C44094F009C8F9A /* BridgingHeaders */,
 				84A47CEC1C440945009C8F9A /* Sources */,
-				84A47D091C45735A009C8F9A /* StaticLibrary */,
 				842AD7D51C21B9EC00FFB227 /* Storyboard */,
 				842AD7D61C21B9F800FFB227 /* Resources */,
 			);
@@ -160,19 +160,19 @@
 		84A47CEC1C440945009C8F9A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				842730B31C7C9A7C00ECB8C0 /* Classes */,
 				84A47CF51C451B8B009C8F9A /* SwiftFactory */,
 				842AD7D41C21B9E400FFB227 /* Controller */,
-				842730B31C7C9A7C00ECB8C0 /* Classes */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
 		};
-		84A47CED1C44094F009C8F9A /* Headers */ = {
+		84A47CED1C44094F009C8F9A /* BridgingHeaders */ = {
 			isa = PBXGroup;
 			children = (
 				84A47CEB1C440922009C8F9A /* CrossTest.h */,
 			);
-			name = Headers;
+			name = BridgingHeaders;
 			sourceTree = "<group>";
 		};
 		84A47CF51C451B8B009C8F9A /* SwiftFactory */ = {
@@ -185,13 +185,14 @@
 			path = SwiftFactory;
 			sourceTree = "<group>";
 		};
-		84A47D091C45735A009C8F9A /* StaticLibrary */ = {
+		84A47D091C45735A009C8F9A /* SharedLibs */ = {
 			isa = PBXGroup;
 			children = (
 				841BDDA11C6A4173008921CF /* libStaticLibrary.a */,
 				841BDDA21C6A4173008921CF /* StaticLibrary.h */,
 			);
-			path = StaticLibrary;
+			name = SharedLibs;
+			path = CrossTest/StaticLibrary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +383,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Loreto Parisi (HFX54548Y7)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/CrossTest/**";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/CrossTest";
@@ -397,6 +399,7 @@
 				New_Setting = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.musixmatch.CrossTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e4cdaaeb-27a9-460c-92cf-95f6776c245d";
 				SWIFT_OBJC_BRIDGING_HEADER = CrossTest/CrossTest.h;
 				VALID_ARCHS = arm64;
 			};

@@ -10,10 +10,10 @@ import Sugar
 /**
 * Base Logger 
 */
-public class Logger {
+internal class Logger {
 	
 	// Log Levels
-	public enum Level: Int {
+	internal enum Level: Int {
 		case QUIET = 0
 		case ERROR = 1
 		case WARN = 2
@@ -22,7 +22,7 @@ public class Logger {
 	}
 	
 	// Log Tags
-	public enum Tag: String {
+	internal enum Tag: String {
 		case QUIET = "QUIET"
 		case ERROR = "ERROR"
 		case WARN = "WARN"
@@ -61,7 +61,7 @@ public class Logger {
 /**
 * Console Logger 
 */
-public class ConsoleLogger : Logger {
+internal class ConsoleLogger : Logger {
 	
 	/**
 	 * Log messages to console
@@ -109,14 +109,14 @@ public class ConsoleLogger : Logger {
 /**
 * File Logger 
 */
-public class FileLogger : Logger {
+internal class FileLogger : Logger {
 
 } //FileLogger
 
 /**
 * Remote Socket Logger 
 */
-public class RemoteLogger : Logger {
+internal class RemoteLogger : Logger {
 
 } //RemoteLogger
 

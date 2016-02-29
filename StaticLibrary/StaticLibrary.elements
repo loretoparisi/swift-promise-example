@@ -52,6 +52,6 @@
         </Reference>
     </ItemGroup>
     <ItemGroup/>
-    <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Oxygene/RemObjects.Oxygene.Nougat.targets"/>
-    <Import Project="SharedProject/SharedProject.projitems" Label="Shared"/>
+    <Import Project="$(MSBuildExtensionsPath)\RemObjects Software\Elements\RemObjects.Elements.Nougat.targets"/>
+    <Import Project="SharedProject\SharedProject.projitems" Label="Shared"/>
 </Project>
