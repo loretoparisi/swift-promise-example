@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		841BDDA31C6A4173008921CF /* libStaticLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 841BDDA11C6A4173008921CF /* libStaticLibrary.a */; };
 		842730BB1C7C9AD200ECB8C0 /* libNougat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 842730B51C7C9AD200ECB8C0 /* libNougat.a */; };
 		842730BC1C7C9AD200ECB8C0 /* libSugar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 842730B61C7C9AD200ECB8C0 /* libSugar.a */; };
 		842730BD1C7C9AD200ECB8C0 /* libSugar.Data.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 842730B71C7C9AD200ECB8C0 /* libSugar.Data.a */; };
 		842730C01C7C9AD200ECB8C0 /* libSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 842730BA1C7C9AD200ECB8C0 /* libSwift.a */; };
 		842AD7D01C21B97600FFB227 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AD7CF1C21B97600FFB227 /* Promise.swift */; };
+		845D04B31C84A2970058C9C3 /* libStaticLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 845D04B01C84A2970058C9C3 /* libStaticLibrary.a */; };
+		845D04B41C84A2970058C9C3 /* libStaticLibrary.fx in Resources */ = {isa = PBXBuildFile; fileRef = 845D04B11C84A2970058C9C3 /* libStaticLibrary.fx */; };
 		848C263B1C1B4C8A006BAC15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C263A1C1B4C8A006BAC15 /* AppDelegate.swift */; };
 		848C263D1C1B4C8A006BAC15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C263C1C1B4C8A006BAC15 /* ViewController.swift */; };
 		848C26401C1B4C8A006BAC15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848C263E1C1B4C8A006BAC15 /* Main.storyboard */; };
@@ -27,13 +28,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		841BDDA11C6A4173008921CF /* libStaticLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libStaticLibrary.a; sourceTree = "<group>"; };
-		841BDDA21C6A4173008921CF /* StaticLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticLibrary.h; sourceTree = "<group>"; };
 		842730B51C7C9AD200ECB8C0 /* libNougat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNougat.a; sourceTree = "<group>"; };
 		842730B61C7C9AD200ECB8C0 /* libSugar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSugar.a; sourceTree = "<group>"; };
 		842730B71C7C9AD200ECB8C0 /* libSugar.Data.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSugar.Data.a; sourceTree = "<group>"; };
 		842730BA1C7C9AD200ECB8C0 /* libSwift.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSwift.a; sourceTree = "<group>"; };
 		842AD7CF1C21B97600FFB227 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		845D04B01C84A2970058C9C3 /* libStaticLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libStaticLibrary.a; sourceTree = "<group>"; };
+		845D04B11C84A2970058C9C3 /* libStaticLibrary.fx */ = {isa = PBXFileReference; lastKnownFileType = file; path = libStaticLibrary.fx; sourceTree = "<group>"; };
+		845D04B21C84A2970058C9C3 /* StaticLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticLibrary.h; sourceTree = "<group>"; };
 		848C26371C1B4C8A006BAC15 /* CrossTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848C263A1C1B4C8A006BAC15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848C263C1C1B4C8A006BAC15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,9 +59,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A47D081C454B79009C8F9A /* libxml2.tbd in Frameworks */,
+				845D04B31C84A2970058C9C3 /* libStaticLibrary.a in Frameworks */,
 				842730C01C7C9AD200ECB8C0 /* libSwift.a in Frameworks */,
 				842730BC1C7C9AD200ECB8C0 /* libSugar.a in Frameworks */,
-				841BDDA31C6A4173008921CF /* libStaticLibrary.a in Frameworks */,
 				84A47CEF1C440972009C8F9A /* libsqlite3.tbd in Frameworks */,
 				842730BB1C7C9AD200ECB8C0 /* libNougat.a in Frameworks */,
 				842730BD1C7C9AD200ECB8C0 /* libSugar.Data.a in Frameworks */,
@@ -127,10 +129,21 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		845D04AF1C84A2970058C9C3 /* SharedLibs */ = {
+			isa = PBXGroup;
+			children = (
+				845D04B01C84A2970058C9C3 /* libStaticLibrary.a */,
+				845D04B11C84A2970058C9C3 /* libStaticLibrary.fx */,
+				845D04B21C84A2970058C9C3 /* StaticLibrary.h */,
+			);
+			name = SharedLibs;
+			path = ../StaticLibrary/bin/Debug/iOS;
+			sourceTree = "<group>";
+		};
 		848C262E1C1B4C8A006BAC15 = {
 			isa = PBXGroup;
 			children = (
-				84A47D091C45735A009C8F9A /* SharedLibs */,
+				845D04AF1C84A2970058C9C3 /* SharedLibs */,
 				842730B41C7C9AD200ECB8C0 /* SilverLibs */,
 				842AD7D31C21B9D200FFB227 /* CocoaLibs */,
 				848C26391C1B4C8A006BAC15 /* CrossTest */,
@@ -183,16 +196,6 @@
 				84A47CF81C451B8B009C8F9A /* ObjectFactory.swift */,
 			);
 			path = SwiftFactory;
-			sourceTree = "<group>";
-		};
-		84A47D091C45735A009C8F9A /* SharedLibs */ = {
-			isa = PBXGroup;
-			children = (
-				841BDDA11C6A4173008921CF /* libStaticLibrary.a */,
-				841BDDA21C6A4173008921CF /* StaticLibrary.h */,
-			);
-			name = SharedLibs;
-			path = CrossTest/StaticLibrary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +259,7 @@
 				848C26451C1B4C8A006BAC15 /* LaunchScreen.storyboard in Resources */,
 				848C26421C1B4C8A006BAC15 /* Assets.xcassets in Resources */,
 				848C26401C1B4C8A006BAC15 /* Main.storyboard in Resources */,
+				845D04B41C84A2970058C9C3 /* libStaticLibrary.fx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,16 +389,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Loreto Parisi (HFX54548Y7)";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/CrossTest/**";
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/CrossTest";
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/CrossTest",
+					../StaticLibrary/bin/Debug/iOS,
+				);
 				INFOPLIST_FILE = CrossTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/CrossTest",
 					"$(PROJECT_DIR)/CrossTest/StaticLibrary",
 					"../silver-packages/ios",
-					"$(PROJECT_DIR)/CrossTest/ios",
+					../StaticLibrary/bin/Debug/iOS,
 				);
 				New_Setting = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.musixmatch.CrossTest;
@@ -410,16 +416,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/CrossTest/**";
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/CrossTest";
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/CrossTest",
+					../StaticLibrary/bin/Debug/iOS,
+				);
 				INFOPLIST_FILE = CrossTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/CrossTest",
 					"$(PROJECT_DIR)/CrossTest/StaticLibrary",
 					"../silver-packages/ios",
-					"$(PROJECT_DIR)/CrossTest/ios",
+					../StaticLibrary/bin/Debug/iOS,
 				);
 				New_Setting = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.musixmatch.CrossTest;
