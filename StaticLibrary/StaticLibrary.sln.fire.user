@@ -5,7 +5,7 @@
 	<key>ActiveConfiguration</key>
 	<string>Debug</string>
 	<key>ActiveProject</key>
-	<string>NetClassLibrary</string>
+	<string>SampleAndroidAppFire</string>
 	<key>ActiveProjectFor_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/Library.swift</key>
 	<string>/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/StaticLibrary.elements</string>
 	<key>ActiveProjectFor_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/Storage.swift</key>
@@ -25,6 +25,8 @@
 	<key>FolderExpanded_SampleAndroidAppFire_/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/SampleAndroidAppFire.elements---References</key>
 	<true/>
 	<key>FolderExpanded_SampleAndroidAppFire_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/SampleAndroidAppFire.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/</key>
+	<true/>
+	<key>FolderExpanded_SampleAndroidAppFire_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/SampleAndroidAppFire.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/Properties/</key>
 	<true/>
 	<key>FolderExpanded_SampleiOSApp_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleiOSApp/SampleiOSApp.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleiOSApp/</key>
 	<true/>
@@ -97,7 +99,7 @@
 	<key>Properties</key>
 	<dict/>
 	<key>SelectedNode</key>
-	<string>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/src/Storage/Storage.swift</string>
+	<string>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/SampleAndroidAppFire.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/Properties/AndroidManifest.android-xml</string>
 	<key>ViewMetaData</key>
 	<dict>
 		<key>/Users/admin/Documents/StaticLibrary/StaticLibrary.sln---BuildLog</key>
@@ -128,27 +130,27 @@
 		<key>/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/StaticLibrary.sln---BuildLog</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>0</integer>
+			<integer>108</integer>
 			<key>CursorY</key>
-			<integer>0</integer>
+			<integer>303</integer>
 			<key>ScrollX</key>
-			<real>473</real>
+			<real>628</real>
 			<key>ScrollY</key>
-			<real>3787</real>
+			<real>4555</real>
 			<key>ScrolledToBottom</key>
 			<true/>
 			<key>SelectionCursorUndecided</key>
-			<false/>
+			<true/>
 			<key>SelectionEndColumn</key>
-			<integer>-1</integer>
+			<integer>293</integer>
 			<key>SelectionEndLine</key>
-			<integer>-1</integer>
+			<integer>303</integer>
 			<key>SelectionIsLinear</key>
 			<true/>
 			<key>SelectionStartColumn</key>
-			<integer>-1</integer>
+			<integer>108</integer>
 			<key>SelectionStartLine</key>
-			<integer>-1</integer>
+			<integer>303</integer>
 		</dict>
 		<key>file:///Users/admin/Documents/StaticLibrary/ClassLibrary2/ClassLibrary2.elements_file:///Users/admin/Documents/StaticLibrary/ClassLibrary2/Class1.swift</key>
 		<dict>
@@ -360,13 +362,36 @@
 		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/SampleAndroidAppFire.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/MainActivity.swift</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>4</integer>
+			<integer>0</integer>
 			<key>CursorY</key>
-			<integer>10</integer>
+			<integer>7</integer>
 			<key>ScrollX</key>
 			<real>0.0</real>
 			<key>ScrollY</key>
-			<real>87</real>
+			<real>0.0</real>
+			<key>SelectionCursorUndecided</key>
+			<false/>
+			<key>SelectionEndColumn</key>
+			<integer>-1</integer>
+			<key>SelectionEndLine</key>
+			<integer>-1</integer>
+			<key>SelectionIsLinear</key>
+			<true/>
+			<key>SelectionStartColumn</key>
+			<integer>-1</integer>
+			<key>SelectionStartLine</key>
+			<integer>-1</integer>
+		</dict>
+		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/SampleAndroidAppFire.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/Properties/AndroidManifest.android-xml</key>
+		<dict>
+			<key>CursorX</key>
+			<integer>70</integer>
+			<key>CursorY</key>
+			<integer>9</integer>
+			<key>ScrollX</key>
+			<real>0.0</real>
+			<key>ScrollY</key>
+			<real>0.0</real>
 			<key>SelectionCursorUndecided</key>
 			<false/>
 			<key>SelectionEndColumn</key>
@@ -1096,13 +1121,13 @@
 		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/src/Storage/Storage.swift</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>13</integer>
+			<integer>3</integer>
 			<key>CursorY</key>
-			<integer>221</integer>
+			<integer>30</integer>
 			<key>ScrollX</key>
 			<real>0.0</real>
 			<key>ScrollY</key>
-			<real>3100</real>
+			<real>0.0</real>
 			<key>SelectionCursorUndecided</key>
 			<false/>
 			<key>SelectionEndColumn</key>
@@ -1142,13 +1167,13 @@
 		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/SharedProject.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/SharedProject/src/Utils/Promise.swift</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>53</integer>
+			<integer>34</integer>
 			<key>CursorY</key>
-			<integer>138</integer>
+			<integer>35</integer>
 			<key>ScrollX</key>
 			<real>0.0</real>
 			<key>ScrollY</key>
-			<real>2039</real>
+			<real>268</real>
 			<key>SelectionCursorUndecided</key>
 			<false/>
 			<key>SelectionEndColumn</key>
@@ -1210,12 +1235,12 @@
 		</dict>
 	</dict>
 	<key>Window_Height</key>
-	<real>981</real>
+	<real>773</real>
 	<key>Window_Width</key>
-	<real>1508</real>
+	<real>1278</real>
 	<key>Window_X</key>
-	<real>-1538</real>
+	<real>0.0</real>
 	<key>Window_Y</key>
-	<real>-231</real>
+	<real>4</real>
 </dict>
 </plist>

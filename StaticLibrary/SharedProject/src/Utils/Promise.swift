@@ -26,6 +26,7 @@ public class Promise {
 	typealias finallyClosure = () -> ()
 	typealias promiseClosure = ( resolve: catchClosure, reject: catchClosure ) -> ()
 	
+	
 	var thens = Array<thenClosure>()?
 	var cat: catchClosure?
 	var fin: finallyClosure?
@@ -33,7 +34,7 @@ public class Promise {
 	var value: AnyObject?
 	
 	var _status: Status = .PENDING
-	private var statusObserver: ( (Promise) -> () )?
+	var statusObserver: ( (Promise) -> () )?
 	var status: Status {
 		get {
 			return _status
@@ -50,14 +51,14 @@ public class Promise {
 	convenience init(closure: promiseClosure ) {
 		self.init()
 		let deferred = Deferred(promise: self)
-		promiseClosure( resolve: deferred.resolve, reject: deferred.reject )
+		closure( resolve: deferred.resolve, reject: deferred.reject )
 	}
 	
 	/*class func all(promises: Array<Promise>) -> Promise {
 		return All(promises);
 	}*/
 	
-	func promis(closure: promiseClosure ) {
+	func promise(closure: promiseClosure ) {
 		let deferred = Deferred(promise: self)
 		closure( resolve: deferred.resolve, reject: deferred.reject )
 	}
@@ -130,12 +131,12 @@ public class Promise {
 			var chain: Promise?
 			
 			var paramValue: AnyObject? = self.value
-			for then in self.thens.enumerate() {
+			for t in self.thens.enumerate() {
 				
 				// If a chain is hit, add the then
-				if (chain != nil) { chain?.then(then); return }
+				if (chain != nil) { chain?.then(t); return }
 				
-				let ret: AnyObject? = then(paramValue)
+				let ret: AnyObject? = self.then(paramValue)
 				if let retPromise = ret as? Promise {
 					
 					// Set chained promised
@@ -183,34 +184,34 @@ public class Promise {
  */
 public class Deferred: Promise {
 	
-	var promise:Promise
+	var p:Promise
 	
 	override convenience init() {
 		self.init(promise: Promise())
 	}
 	
 	private init(promise: Promise) {
-		self.promise = promise
+		self.p = promise
 	}
 	
 	func resolve(value: AnyObject?) {
-		promise.doResolve(value)
+		p.doResolve(value)
 	}
 	
 	func reject(error: AnyObject?) {
-		promise.doReject(error)
+		p.doReject(error)
 	}
 	
 	override func then(then: thenClosure) -> Promise {
-		return promise.then(then)
+		return p.then(then)
 	}
 	
 	override func catch_(catch_: catchClosure) -> Promise {
-		return promise.catch_(catch_)
+		return p.catch_(catch_)
 	}
 	
 	override func finally(finally: finallyClosure) -> Promise {
-		return promise.finally(finally)
+		return p.finally(finally)
 	}
 	
 }
@@ -219,6 +220,8 @@ public class Deferred: Promise {
  * Promise All
  */
 public class All: Promise {
+	
+	typealias observeClosure = (promise:Promise) -> ()
 	
 	var promises = Array<Promise>()
 	
@@ -231,22 +234,7 @@ public class All: Promise {
 	
 	private var statusToChangeTo: Status = .PENDING
 	
-	public init(promises: Array<Promise>) {
-		super.init()
-		self.promiseCount = promises.count
-		
-		for promise in promises {
-			let p:Promise = (promise as? Deferred == nil) ?
-				promise :
-				(promise as! Deferred).promise
-			self.promises.append(p)
-			let closure : (Promise) -> () = observe;
-			p.statusObserver = observe
-		}
-		
-	}
-	
-	private func observe(promise: Promise) {
+	private func observe(promise: Promise) -> () {
 		self.sync(self, closure: {
 			switch promise.status {
 			case .RESOLVED:
@@ -286,5 +274,20 @@ public class All: Promise {
 			}
 			
 		})
+	}
+	
+	 public init(promises: Array<Promise>) {
+		super.init()
+		self.promiseCount = promises.count
+		
+		for promise in promises {
+			let p:Promise = (promise as? Deferred == nil) ?
+				promise :
+				(promise as! Deferred).p
+			self.promises.append(p)
+			let closure : (Promise) -> () = observe;
+			p.statusObserver = closure
+		}
+		
 	}
 }
