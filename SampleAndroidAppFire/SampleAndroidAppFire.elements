@@ -88,7 +88,8 @@
             <HintPath>\Volumes\MacHDD2\Developmemt\ParisiLabs\swift-promise-example\silver-packages\android\sugar.jar</HintPath>
             <Private>True</Private>
         </Reference>
-        <Reference Include="Cooper">
+        <Reference Include="cooper">
+            <HintPath>\Users\admin\Projects\MusiXmatch\MXMPortableNETLib\silver-packages\android\cooper.jar</HintPath>
             <Private>True</Private>
         </Reference>
     </ItemGroup>

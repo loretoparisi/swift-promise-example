@@ -130,27 +130,27 @@
 		<key>/Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/StaticLibrary/StaticLibrary.sln---BuildLog</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>108</integer>
+			<integer>0</integer>
 			<key>CursorY</key>
-			<integer>303</integer>
+			<integer>0</integer>
 			<key>ScrollX</key>
-			<real>628</real>
+			<real>0.0</real>
 			<key>ScrollY</key>
-			<real>4555</real>
+			<real>6476</real>
 			<key>ScrolledToBottom</key>
 			<true/>
 			<key>SelectionCursorUndecided</key>
 			<true/>
 			<key>SelectionEndColumn</key>
-			<integer>293</integer>
+			<integer>0</integer>
 			<key>SelectionEndLine</key>
-			<integer>303</integer>
+			<integer>0</integer>
 			<key>SelectionIsLinear</key>
 			<true/>
 			<key>SelectionStartColumn</key>
-			<integer>108</integer>
+			<integer>0</integer>
 			<key>SelectionStartLine</key>
-			<integer>303</integer>
+			<integer>0</integer>
 		</dict>
 		<key>file:///Users/admin/Documents/StaticLibrary/ClassLibrary2/ClassLibrary2.elements_file:///Users/admin/Documents/StaticLibrary/ClassLibrary2/Class1.swift</key>
 		<dict>
@@ -362,9 +362,9 @@
 		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/SampleAndroidAppFire.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/MainActivity.swift</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>0</integer>
+			<integer>37</integer>
 			<key>CursorY</key>
-			<integer>7</integer>
+			<integer>10</integer>
 			<key>ScrollX</key>
 			<real>0.0</real>
 			<key>ScrollY</key>
@@ -385,13 +385,13 @@
 		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/SampleAndroidAppFire.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/Properties/AndroidManifest.android-xml</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>70</integer>
+			<integer>4</integer>
 			<key>CursorY</key>
-			<integer>9</integer>
+			<integer>3</integer>
 			<key>ScrollX</key>
 			<real>0.0</real>
 			<key>ScrollY</key>
-			<real>0.0</real>
+			<real>26</real>
 			<key>SelectionCursorUndecided</key>
 			<false/>
 			<key>SelectionEndColumn</key>
@@ -1237,7 +1237,7 @@
 	<key>Window_Height</key>
 	<real>773</real>
 	<key>Window_Width</key>
-	<real>1278</real>
+	<real>1265</real>
 	<key>Window_X</key>
 	<real>0.0</real>
 	<key>Window_Y</key>
