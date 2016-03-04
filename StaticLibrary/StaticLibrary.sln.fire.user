@@ -99,7 +99,7 @@
 	<key>Properties</key>
 	<dict/>
 	<key>SelectedNode</key>
-	<string>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/SampleAndroidAppFire.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/Properties/AndroidManifest.android-xml</string>
+	<string>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/SampleAndroidAppFire.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/MainActivity.swift</string>
 	<key>ViewMetaData</key>
 	<dict>
 		<key>/Users/admin/Documents/StaticLibrary/StaticLibrary.sln---BuildLog</key>
@@ -362,13 +362,13 @@
 		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/SampleAndroidAppFire.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/MainActivity.swift</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>37</integer>
+			<integer>43</integer>
 			<key>CursorY</key>
-			<integer>10</integer>
+			<integer>35</integer>
 			<key>ScrollX</key>
 			<real>0.0</real>
 			<key>ScrollY</key>
-			<real>0.0</real>
+			<real>222</real>
 			<key>SelectionCursorUndecided</key>
 			<false/>
 			<key>SelectionEndColumn</key>
@@ -391,7 +391,7 @@
 			<key>ScrollX</key>
 			<real>0.0</real>
 			<key>ScrollY</key>
-			<real>26</real>
+			<real>0.0</real>
 			<key>SelectionCursorUndecided</key>
 			<false/>
 			<key>SelectionEndColumn</key>
@@ -1235,12 +1235,12 @@
 		</dict>
 	</dict>
 	<key>Window_Height</key>
-	<real>773</real>
+	<real>858</real>
 	<key>Window_Width</key>
-	<real>1265</real>
+	<real>1364</real>
 	<key>Window_X</key>
-	<real>0.0</real>
+	<real>-1679</real>
 	<key>Window_Y</key>
-	<real>4</real>
+	<real>-280</real>
 </dict>
 </plist>
