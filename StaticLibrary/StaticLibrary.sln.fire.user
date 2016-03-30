@@ -362,32 +362,32 @@
 		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/SampleAndroidAppFire.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/MainActivity.swift</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>43</integer>
+			<integer>4</integer>
 			<key>CursorY</key>
-			<integer>35</integer>
+			<integer>15</integer>
 			<key>ScrollX</key>
 			<real>0.0</real>
 			<key>ScrollY</key>
-			<real>222</real>
+			<real>75</real>
 			<key>SelectionCursorUndecided</key>
-			<false/>
+			<true/>
 			<key>SelectionEndColumn</key>
-			<integer>-1</integer>
+			<integer>5</integer>
 			<key>SelectionEndLine</key>
-			<integer>-1</integer>
+			<integer>27</integer>
 			<key>SelectionIsLinear</key>
 			<true/>
 			<key>SelectionStartColumn</key>
-			<integer>-1</integer>
+			<integer>4</integer>
 			<key>SelectionStartLine</key>
-			<integer>-1</integer>
+			<integer>15</integer>
 		</dict>
 		<key>file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/SampleAndroidAppFire.elements_file:///Volumes/MacHDD2/Developmemt/ParisiLabs/swift-promise-example/SampleAndroidAppFire/Properties/AndroidManifest.android-xml</key>
 		<dict>
 			<key>CursorX</key>
-			<integer>4</integer>
+			<integer>25</integer>
 			<key>CursorY</key>
-			<integer>3</integer>
+			<integer>11</integer>
 			<key>ScrollX</key>
 			<real>0.0</real>
 			<key>ScrollY</key>
