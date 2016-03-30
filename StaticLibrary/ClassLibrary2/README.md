@@ -22,4 +22,5 @@
 │           ├── ClassLibrary2.elements.FilesWrittenAbsolute.txt
 │           └── samplelibrary.jar
 ├── ClassLibrary2.elements
-└── ClassLibrary2.elements.user```
+└── ClassLibrary2.elements.user
+ ```
